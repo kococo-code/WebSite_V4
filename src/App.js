@@ -1,9 +1,7 @@
 import React from 'react';
 const App = () => (
   <div>
-    <div className="header">
-        React BoilerPlate
-    </div>
+    Hi
   </div>
 );
 export default App;

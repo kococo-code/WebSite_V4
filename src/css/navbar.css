@@ -1,0 +1,50 @@
+#Navbar{
+    width : 100%;
+    background-color: var(--oceanblue);
+}
+#Navbar li{
+    display : inline-block;
+    list-style: none;
+    cursor: pointer;
+    color : white;
+    transition-duration: .4s;
+}
+#Navbar li:hover{
+    color : var(--mustard);
+}
+@media screen and (min-width : 600px){
+    #Navbar{
+        position : fixed;
+        top : 0px;
+        left : 0px;
+        height: 60px;
+    }
+    #Navbar .Nav-list{
+        position: absolute;
+        top : 20%;
+        right : 10%;
+    }
+    #Navbar li{
+        margin : 10px;
+        font-size : 1.0rem;
+    }
+    
+}
+@media screen and (max-width : 600px){
+    #Navbar{
+        position : fixed;
+        left :0px;
+        bottom : 0px;
+        width : 100%;
+        height : 50px;
+        background-color: var(--oceanblue);
+    }
+    #Navbar .Nav-list{
+        margin : 0 auto;
+    }
+    #Navbar li{
+        margin : 15px;
+        font-size : 1rem; /*16px*/
+    }
+    
+}

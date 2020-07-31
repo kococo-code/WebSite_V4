@@ -1,0 +1,54 @@
+#Introduce{
+    position: absolute;
+    top : 0px;
+    left : 0px;
+    height : 200vh;
+    width : 100%;
+    background-color: var(--oceanblue);
+    overflow : hidden;
+}
+
+#Introduce .header{
+    position: absolute;
+    top : 5%;
+    left : 10%;
+    width : 100%;
+    height : 80vh;
+    font-size : 32px;
+    font-weight : 400;
+    font-family : var(--robotoMono);
+    margin : 0 auto;
+    padding : 10px;
+    color : white;
+    line-height : 50px;
+    text-align: left;
+    overflow: hidden;
+    border-top-right-radius : 5px;
+    border-bottom-right-radius : 5px;
+}
+#Introduce span{
+    padding :0 5px 0 5px ;
+    color : var(--oceanblue);
+    background: #DFFF00;
+}
+
+#Introduce .header .Info{
+    position: absolute;
+    top : 5%;
+    left : 5%;
+    width: 90%;
+    height : 90%;
+    margin : 0 auto;
+    border : 1px solid transparent;
+    background-color: rgba(255,255,255,.9);
+    transition-duration : .4s;
+    visibility: hidden;
+}
+#Introduce .header .Info:hover{
+    border : 3px solid var(--oceanblue);
+    background-color: #fff;
+}
+#Introduce .header .Emoji{
+    z-index: 1;
+    font-size : 80px;
+}

@@ -1,50 +1,81 @@
 #Navbar{
+    position : fixed;
+    top : 0 ;
+    left : 0 ;
+    width :120px; 
+    height : 100vh;
+    z-index: 98;
+}
+#Navbar .Hamburger{
+    position: absolute;
+    top : 5%;
+    height : 50px;
     width : 100%;
-    background-color: var(--oceanblue);
+    margin : 0 auto;
+    transition-duration : .4s;
+    cursor : pointer;
+
 }
-#Navbar li{
-    display : inline-block;
-    list-style: none;
-    cursor: pointer;
+#Navbar .Hamburger .line{
+    width : 30px;
+    height : 2px;
+    margin-left : auto;
+    margin-right : auto;
+    margin-top : 5px;
+    background: white;
+    z-index: 99;
+}
+#Navbar .Hamburger:hover{
+    transform : scale(1.2);
+}
+#Navbar .Nav-list{
+    position: absolute;
+    top : 0px;
+    left : 0px;
+    width : 0px;
+    height : 0px;
+    background-color: rgba(22,22,22,.9);
+    opacity: 1;
+    transition : width .4s;
+    z-index : 2;
+    visibility : hidden;
+}
+#Navbar .Nav-list .Main{
+    position: absolute;
+    top : 15%;
+    left :0px;
+    width : 100%;
+    text-align : center;
+    transform : skewX(-11deg);
+
+}
+#Navbar .Nav-list .Main a{
+    padding : 10px;
+    text-align : center;
+    font-family : var(--robotoMono);
+    font-weight : 800;
+    font-size : 32px;
+    font-style : bold;
     color : white;
-    transition-duration: .4s;
+    border : 2px solid var(--neongreen);
 }
-#Navbar li:hover{
-    color : var(--mustard);
+
+#Navbar .Nav-link{
+    position: absolute;
+    top : 30%;
+    height : 80px;
+    width : 100%;
+    list-style : none;
+    font-size : 20px;
+    line-height : 80px;
+    color : white;
 }
-@media screen and (min-width : 600px){
-    #Navbar{
-        position : fixed;
-        top : 0px;
-        left : 0px;
-        height: 60px;
-    }
-    #Navbar .Nav-list{
-        position: absolute;
-        top : 20%;
-        right : 10%;
-    }
-    #Navbar li{
-        margin : 10px;
-        font-size : 1.0rem;
-    }
-    
+#Navbar .Nav-link a{
+    color : white;
+    text-decoration: none;
+    cursor: pointer;
+
 }
-@media screen and (max-width : 600px){
-    #Navbar{
-        position : fixed;
-        left :0px;
-        bottom : 0px;
-        width : 100%;
-        height : 50px;
-        background-color: var(--oceanblue);
-    }
-    #Navbar .Nav-list{
-        margin : 0 auto;
-    }
-    #Navbar li{
-        margin : 15px;
-        font-size : 1rem; /*16px*/
-    }
-    
+#Navbar .Nav-link li:hover{
+    background-color: rgba(0,0,0,.4);
 }

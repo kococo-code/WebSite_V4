@@ -10,7 +10,7 @@ function Navbar(){
             setIsonClicked(true);
         }
     }
-    useEffect(()=>{
+    function handleNavbar(){
         const NavListelement = document.getElementsByClassName("Nav-list")[0];
         const HamburgerElement = document.getElementsByClassName("Hamburger")[0];
         const navBarElement = document.getElementById('Navbar');
@@ -38,7 +38,10 @@ function Navbar(){
             line1.style.transform = "translate3d(0px,0px,0) rotate(0deg)";
             line3.style.transform = "translate3d(0px,0px,0) rotate(0deg)";
         }
-    })
+    }
+    useEffect(()=>{
+        handleNavbar();
+    },)
 
 
     return(

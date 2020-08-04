@@ -3,7 +3,7 @@
     top : 0 ;
     left : 0 ;
     width :120px; 
-    height : 100vh;
+    height : 150vh;
     z-index: 98;
 }
 #Navbar .Hamburger{
@@ -76,6 +76,7 @@
     cursor: pointer;
 
 }
+
 #Navbar .Nav-link li:hover{
     background-color: rgba(0,0,0,.4);
 }

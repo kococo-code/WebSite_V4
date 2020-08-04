@@ -6,11 +6,12 @@
     width : 100%;
     background-color: var(--oceanblue);
     overflow : hidden;
+    z-index: 1;
 }
 
 #Introduce .header{
     position: absolute;
-    top : 5%;
+    top : 10%;
     left : 10%;
     width : 100%;
     height : 80vh;
@@ -25,6 +26,7 @@
     overflow: hidden;
     border-top-right-radius : 5px;
     border-bottom-right-radius : 5px;
+    transform-style : preserve-3d;
 }
 #Introduce span{
     padding :0 5px 0 5px ;
@@ -51,4 +53,12 @@
 #Introduce .header .Emoji{
     z-index: 1;
     font-size : 80px;
+}
+#Introduce .Rectangle{
+    width : 100px;
+    height : 100px;
+    position: absolute;
+    top : 60%;
+    left : 30%;
+    background-color: white;
 }

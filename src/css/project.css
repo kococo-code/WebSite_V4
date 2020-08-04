@@ -1,0 +1,51 @@
+#Project{
+    position: absolute;
+    top : 200vh;
+    left : 0px;
+    width : 100%;
+    height : 100vh;
+    z-index: 2;
+    background-color: #222 ;
+}
+#Project .cards{
+    overflow : hidden;
+    display : flex;
+    flex-direction: row;
+    position: absolute;
+    top : 100px;
+    left : 20px;
+}
+#Project .cards .card{
+    list-style : none;
+    margin : 20px;
+    width : 300px;
+    height : 400px;
+    background-color: var(--neongreen);
+    overflow : hidden;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) .1s;
+    cursor: pointer;
+}
+#Project .cards .card:hover{
+  transform : scale(1.1);
+}
+#Project .cards .card .cover{
+    position: relative;
+    top : 50%;
+    left : -5px;
+    width : 110%;
+    height : 500px;
+    transform : skewY(11deg);
+    background-color: #222;
+}
+#Project .cards .card .cover:hover{
+    animation: moveCover 5s alternate infinite;
+    animation-delay : .4s;
+}
+@keyframes moveCover{
+    from{
+        transform : translateY(0px) skewY(11deg);
+    }
+    to{
+        transform : translateY(-50px) skewY(-11deg);
+    }
+}

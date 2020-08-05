@@ -1,6 +1,6 @@
 import React, { useEffect ,useState } from 'react';
 
-export default function Intro(){
+export default function Target(){
     const [offsetY ,setOffsetY] = useState(0);
     useEffect(()=>{
         const element = document.getElementById('wordScroll');

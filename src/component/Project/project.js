@@ -1,30 +1,27 @@
 import React from 'react';
-
+import flightMapImage from '../../assets/image/flight_map.jpg';
 
 export default function Project(){
 
 
     return(
         <section id="Project">
-            <div className="cards">
+            <section className="Project_cards">
                 <li className="card">
-                    <div className="cover"></div>
                 </li>
                 <li className="card">
-                <div className="cover"></div>
-
-                </li>
-                <li className="card">
-                <div className="cover"></div>
 
                 </li>
                 <li className="card">
-                <div className="cover"></div>
 
                 </li>
+                <li className="card">
 
-
-            </div>
+                </li>
+                
+           
+            </section>
+       
         </section>
         
     )

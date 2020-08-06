@@ -3,7 +3,7 @@ import Observe from '../util/DomObserve';
 export default function Introduce(){
     const [mousePos , setMousePos] = useState({x:undefined,y:undefined});
     const [onBoard , setOnBoard] = useState(true);
-    const mouseTrackingThreshold = 30;
+    const mouseTrackingThreshold = 5;
     useEffect(()=>{
         const handleMousePosition = ev =>{
             setMousePos({x:ev.clientX,y:ev.clientY});
@@ -15,7 +15,7 @@ export default function Introduce(){
     },[])
     return(
         <section id="Introduce" {...Observe(setOnBoard,0.1)}>
-            <header style={onBoard ? {transform:`translate3d(${mousePos.x/mouseTrackingThreshold}px,${mousePos.y/mouseTrackingThreshold}px,0px)`} : {transform : `translate3d(0,0,0)`}}>
+            <header style={onBoard ? {transform:`translate3d(${(mousePos.x/mouseTrackingThreshold*1.2)-100}px,${mousePos.y/mouseTrackingThreshold*1.2}px,${(mousePos.x+mousePos.y)/(mouseTrackingThreshold*30)}px)`} : {transform : `translate3d(0,0,0)`}}>
                 <h3>SoftWare Engineer, <span className="highlight">Jintaek Lim</span></h3>
                 <p>Based @Seoul, Korea</p>
                 <p>Using JavaScript and Python ,C++</p>

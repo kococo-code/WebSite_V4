@@ -15,8 +15,7 @@ export default function Target(){
     },[])
 
     return(
-        <section id="Introduce" className="scroll-touch scorll-auto">
-        
+        <footer id="Footer" className="scroll-touch scorll-auto"> 
            <section className="header">
             <div>Background <span>#3a5ce9</span> Font <span>Roboto Mono</span> Hightlight <span>#DFFF00</span></div> 
             <div>SoftWare Engineer  <span>Major</span>  Information Security Engineering</div> 
@@ -25,6 +24,6 @@ export default function Target(){
             <div>Used Bundeler <span>WebPack</span>  FrameWork <span>React JS</span></div> 
             <div className="Info"></div>
            </section>
-        </section>
+        </footer>
     )
 }

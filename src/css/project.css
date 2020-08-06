@@ -1,37 +1,43 @@
 #Project{
     position: absolute;
-    top : 200vh;
+    top : 3000px;
     left : 0px;
     width : 100%;
     height : 2200px ;
     background-color: black;
     color :white;
+    overflow : hidden;
 }
 #Project .Project_cards{  
-    position: absolute;
+    position : absolute;
     top : 50px;
+    left :0px;
     width : 100%;
-    height : 500px;  
+    height : 100vh;  
 }
 .Project_cards{
-    position : absolute;
-    top : 0px;
-    left :0px;
     display : inline;
+    transform-style: preserve-3d;
+    perspective: 1200px;
 }
-.Project_cards li{
-    width : 90%;
-    height : 500px;
-    background: transparent;
+.Project_cards .card{
+    position: absolute;
+    left : 500px;
+    width : 400px;
+    height : 300px;
+    background: var(--oceanblue);
     border : 1px solid var(--oceanblue); 
-    margin : 10px auto;  
     overflow : hidden;
     list-style : none;
-
+    transform : translate3d(0px,0px,80px) skewX(11deg);
+    transition : all ease 1s;
 }
-
-.Project_cards .flightMap{
-    background : url('../assets/image/flight_map.jpg');
-    width : 100%;
-    height : 100%;
+.Project_cards .card:hover
+{
+    position: absolute;
+    top : 100px;
+    left : 100px;
+    width : 80%;
+    height : 70%;
+    transform : translate3d(0,0,0) skewX(0deg);
 }

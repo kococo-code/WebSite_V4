@@ -6,45 +6,47 @@
     height : 1000px;
     background-color: black;
     color : white;
-    overflow : hidden;
-    
+    overflow : hidden;  
 }
-#WordRotate .field{
+#WordRotate .container{
     position: absolute;
-    top : -1500px;
-    left : -100px;
+    top : 50px;
+    left : 0px;
+    width : 100%;
+}
+#WordRotate .randomWord{
+    position: absolute;
+    top : -500px;
+    left : -500px;
     display : flex;
     transform : rotate(-30deg);
+    text-align: center;
+    
 }
-#WordRotate .field .wordrow{
+#WordRotate .randomWord .wordrow{
     display : inline;
     margin : 0px 0px 0px 0px;
     white-space : nowrap;
-    animation : rotate 7s infinite alternate;
+  
+
 }
-#WordRotate .field .reverse {
-    animation : rotate_reverse 8s infinite alternate;
-}
-#WordRotate .field .reverse_two {
-    animation : rotate_reverse 10s ease-in-out infinite alternate;
-}
-#WordRotate .field .wordrow li{
+#WordRotate .randomWord .wordrow li{
     font-size : 64px;
     list-style : none;
+    transition: .3s;
+    opacity: .07;
+    z-index: 2;
 }
-@keyframes rotate{
-    from{
-        transform : translateY(0px);
-    }
-    to{
-        transform : translateY(500px);
-    }
+#WordRotate .randomWord .wordrow li:hover
+{
+    opacity : 1;
+    color : #DFFF00;
 }
-@keyframes rotate_reverse{
-    from{
-        transform : translateY(0px);
-    }
-    to{
-        transform : translateY(-500px);
-    }
+#WordRotate .container span{
+    position: absolute;
+    top : 300px;
+    left : 700px;
+    font-size : 120px;
+    color : #DFFF00;
+    transition: .3s;
 }

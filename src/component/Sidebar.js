@@ -22,7 +22,7 @@ export default function SideBar() {
     
     return(
         <section id="SideBar">
-            <span>Jin Taek Lim, @Seoul, Korea</span>
+            <span>Jin Taek Lim, @Seoul, Korea, SoftWare Engineer Rookie</span>
         </section>
     )
 }

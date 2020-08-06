@@ -1,23 +1,22 @@
 import React, { useEffect , useState } from 'react';
 import Observe from '../util/DomObserve';
+import Uyuni from '../../assets/image/Uyuni.jpeg';
+import HanoiNoibai from '../../assets/image/HanoiNoibai.jpeg';
 function WordRotate(){
-    const [onBoard , setOnBoard] = useState(true);
+
+    const [onBoard , setOnBoard] = useState(false);
     const [scrollYoffset , setYoffset] = useState(0);
-    const columnCount = 20;
-    const rowCount = 25;
-    const charset = "12345678910!@#$%^&*()QWERTYUIOPASDFGHJKLZXCVBNM";
-    const charset_ = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const colorPalatte = ['#3a5ce9','#e6a32a','#dfff00','#123456','#ff9922','#123901','#ffaaee'];
-
- 
+    const [complete,setComplete]  = useState([0]);
+    
     useEffect(()=>{
-        const target = document.getElementById('WordRotate');
+        const target = document.getElementById('TravelArchive');
         const targetHeight = target.getBoundingClientRect().top;
-
         const handleYoffset = ()=>{
-            if(window.pageYOffset > targetHeight &&  window.pageYOffset < 4000){
-                setYoffset(window.pageYOffset-targetHeight);
+            if(window.pageYOffset > targetHeight &&  window.pageYOffset < 5000){
+               setYoffset(window.pageYOffset-targetHeight);
             }else if(window.pageYOffset < targetHeight){
+               setYoffset(0);
+            }else{
                 setYoffset(0);
             }
         }
@@ -27,49 +26,44 @@ function WordRotate(){
         }
     },[]);
 
+    useEffect(()=>{ 
+        const elementHeight = document.getElementsByClassName('three')[0];
+        const threeHeight = elementHeight.getBoundingClientRect().top;
+        console.log(threeHeight);
 
-    useEffect(()=>{
-        const charsetLength = charset.length;
-        const MultipleScale = 1000;
-        // Random Integer for ArraySet
-        const randomIdx = (ModulerScale) => Math.ceil((Math.random() * MultipleScale)% ModulerScale) -1; 
+        if(threeHeight < 30 && complete[0] === 0){
+            const CounterElement = document.getElementsByClassName('Counter')[0];
+            const nextNumber = document.createElement('div');
+            nextNumber.textContent = '02';
+            nextNumber.setAttribute('class','next');
+            CounterElement.appendChild(nextNumber);
 
-        // Get Two Letter Random Code
-        const randomTwoLetterWord = () => charset[randomIdx(charsetLength)] + charset[randomIdx(charsetLength)];
+            let tmpComplete = complete;
+            tmpComplete[0] = 1;
+            tmpComplete.push = 0;
+            setComplete(tmpComplete);
+        }   
 
-        // Get Three Letter Random Code
-        const randomThreeLetterWord = () => charset[randomIdx(charsetLength)] + charset[randomIdx(charsetLength)] + charset[randomIdx(charsetLength)]; 
-
-        const randomWordElement = document.getElementsByClassName('randomWord')[0];
-        const colorPicker = () => colorPalatte[randomIdx(colorPalatte.length)];
-        function setProperty(){
-            for(let i= 0 ; i < columnCount ; i++){
-                let column = document.createElement('div');
-                column.setAttribute('class' ,'wordrow reverse');
-                      
-                for(let j = 0 ; j < rowCount ; j++){
-                    let row = document.createElement('li');
-                    row.textContent = randomTwoLetterWord();
-                    row.textContent = randomThreeLetterWord();
-                    column.appendChild(row);
-                }
-                randomWordElement.appendChild(column);
-            }
-        }
-        setProperty();
-    },[])
-
-   
-
+    });
     return(
-        <section id="WordRotate" style={{transform : `translate3d(0,${scrollYoffset}px,0)`}} {...Observe(setOnBoard,0.01)}>
+        <section id="TravelArchive">
             <section className="container">
-                <section className="randomWord"/>
-                <section>
-                    <span>Hello! </span>
-                </section>
+                <div className="Counter" style={onBoard ?  {position : "absolute", top : "0px"} : {position : "fixed" ,top : `${100}px`,left : "100px"}}>
+                    <div className="prev">01</div>
+                    </div>
+                    <article className="PictureContainer">
+                        <div className="PictureInfo">
+                            <strong>Uyuni Bolivia</strong>
+                            </div>
+                        <img src={Uyuni} width="600" height="400"></img>
+                    </article>
+                    <article className="three">
+                        </article>
+
+                    <article className="Two" {...Observe(setOnBoard,0.01)} >
+                    </article>                    
             </section>
-            
+
         </section>
     )
 

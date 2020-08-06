@@ -7,7 +7,6 @@ export default function Main(){
         <div>
             <Introduce></Introduce>
             <WordRotate></WordRotate>
-            <Project></Project>
         </div>
     )
 }

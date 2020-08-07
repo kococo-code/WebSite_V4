@@ -1,0 +1,12 @@
+.CustomButton{
+    position: absolute;
+    font-family: 'open sans',sans-serif;
+    font-size : 20px;
+    padding : 10px;
+    text-decoration: none;
+    color : white;
+    z-index: 33;
+}
+.Github:hover{
+    color : #3a5ce9;
+}

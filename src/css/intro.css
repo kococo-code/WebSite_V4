@@ -2,12 +2,13 @@
     position : absolute;
     top : 0px;
     left : 0px;
-    height : 1024px;
+    height : 130vh;
     width : 100%;
     background : black;
     color : white;
     transform-style : preserve-3d;
     perspective: 1200px;
+    z-index : 1;
 }
 #Introduce header{
     position : absolute;
@@ -18,7 +19,7 @@
     text-align : left;
     margin : 0 auto;
     line-height : 15px;   
-    
+    white-space : nowrap;    
 }
 #Introduce header h3{
     font-size : 40px;

@@ -17,3 +17,16 @@
     transform : translateX(50px);
     transition : transform .4s;
 }
+#SideBar svg{
+    margin-top : 20px;
+    width : 27px;
+    height : 27px;
+    fill : #fff;
+    cursor : pointer;
+    transition: all .4s;
+}
+#SideBar svg:hover{
+
+    transform : translateY(-5px);
+    fill : #3a5ce9;
+}

@@ -2,11 +2,22 @@
     position: absolute;
     font-family: 'open sans',sans-serif;
     font-size : 20px;
-    padding : 10px;
+    padding : 10px 12px 10px 12px;
     text-decoration: none;
+    border-radius : 5px;
     color : white;
+    background-color: #3a5ce9;
     z-index: 33;
 }
-.Github:hover{
-    color : #3a5ce9;
+.Github,
+.Demo{
+    transition : all .3s;
+}
+.Github:hover{    
+    color : black;
+    background-color: white;
+}
+.Demo:hover{
+    color : black;
+    background-color: white;
 }

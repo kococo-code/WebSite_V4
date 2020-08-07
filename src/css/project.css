@@ -1,43 +1,173 @@
-#Project{
+#ProjectArchive{
     position: absolute;
-    top : 3000px;
+    top : 1000px;
     left : 0px;
     width : 100%;
-    height : 2200px ;
+    height : 6000px;
     background-color: black;
-    color :white;
-    overflow : hidden;
+    color : white;
+    overflow : hidden;  
+    white-space : pre;
+    z-index: 2;
+    transition: all .1s;
 }
-#Project .Project_cards{  
-    position : absolute;
-    top : 50px;
-    left :0px;
+#ProjectArchive .container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top : 0px;
+    left : 0px;
     width : 100%;
-    height : 100vh;  
+    height : 100%;
+    z-index: 1;
+    overflow :hidden;
 }
-.Project_cards{
-    display : inline;
-    transform-style: preserve-3d;
-    perspective: 1200px;
+
+#ProjectArchive .WordContainer{
+    
+    display : none;
+    flex-direction: row;
+    width : 2000px;
+    height : 100%;
+    font-size : 64px;
+    transform : rotate(-30deg);
 }
-.Project_cards .card{
+#ProjectArchive .normal{
+    position : absolute;
+    top : -600px;
+    left : 600px;
+    
+}
+#ProjectArchive .fixed{
+    position : fixed;
+    top : -600px;
+    left : -600px;
+}
+
+#ProjectArchive .WordContainer .word{
+    color : #fff;
+    opacity : 0.03;
+    transition: all .7s;
+}
+#ProjectArchive .WordContainer .word.blue:hover{
+    color : #3a5ce9;
+    opacity: 1;
+}
+#ProjectArchive .WordContainer .word.red:hover{
+    color : #f49cc8;
+    opacity: 1;
+}
+#ProjectArchive .WordContainer .word.green:hover{
+    color : #66eece;
+    opacity: 1;
+}
+#ProjectArchive .WordContainer .word.yellow:hover{
+    color : #f4f19c;
+    opacity: 1;
+}
+#ProjectArchive .WordContainer .word.purple:hover{
+    color : #a866ee;
+    opacity: 1;
+}
+
+#ProjectArchive .WordContainer .bright{
+    transform : scale(1.1);
+    transition : all 1s;
+    color : #DFFF00;
+    opacity: 1;
+}
+
+
+.ProjectContainer{
+    height : 700px;
+    width : 1024px;
+}
+
+.ProjectContainer.first{
+    position : absolute;
+    top: 800px;
+    left : 200px;
+}
+.ProjectContainer.second{
+    position : absolute;
+    top: 2000px;
+    left: 300px;
+}
+
+.ProjectContainer img:hover{
+    animation : scaleIn ease 12s infinite alternate;
+}
+.ProjectContainer .ImgContainer{
     position: absolute;
-    left : 500px;
-    width : 400px;
-    height : 300px;
-    background: var(--oceanblue);
-    border : 1px solid var(--oceanblue); 
+    left : 0px;
+    border-radius : 5px;
     overflow : hidden;
-    list-style : none;
-    transform : translate3d(0px,0px,80px) skewX(11deg);
-    transition : all ease 1s;
 }
-.Project_cards .card:hover
-{
+
+.ProjectContainer .ProjectInfo{
+    position : absolute;
+    top: 400px;
+    left : 0px;
+    font-family : 'Poppins' , sans-serif;
+    font-style : italic;
+    z-index: 3;
+    text-align: left;
+    padding : 5px;
+    border-radius : 5px;
+    color : white;
+}
+.ProjectContainer .trainer{
+    position : absolute;
+    top : 600px;
+}
+.ProjectContainer .stacks{
     position: absolute;
-    top : 100px;
-    left : 100px;
-    width : 80%;
-    height : 70%;
-    transform : translate3d(0,0,0) skewX(0deg);
+    top: 0px;
+    right : 80px;
+    z-index: 22;
+    transition: all .8s;
+    text-align : left;
+}
+
+.ProjectContainer .stacks li{
+    display : flex;
+    flex-direction : column;
+    list-style: none;
+    margin : 5px;    
+    padding : 2px;
+    font-size : 18px;
+    font-family : 'Roboto Mono', monospace;
+    background: rgba(0,0,0,.4);
+}
+
+.ProjectContainer .stacks li:hover{
+    background : rgba(22,22,22);
+}
+
+.ProjectInfo span{
+    font-size : 32px;
+}
+.ProjectInfo strong{
+    font-size : 48px;
+}
+.ProjectContainer .visible{
+    opacity : 1;
+}
+
+#ProjectArchive .container .threshold{
+    position : absolute;
+    bottom : 0px;
+    height : 10px;
+    width : 100%;
+    background: white;
+
+}
+
+@keyframes scaleIn{
+    from{
+        transform : translateX(0px) scale(1.15);
+    }
+    to{
+        transform : translateX(30px) scale(1.0);
+    }
 }

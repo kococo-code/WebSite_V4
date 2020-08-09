@@ -4,7 +4,7 @@ import BrightWord from './WordBright';
 import BackgroundController from './BackgroundController';
 import flightMapImage from '../../assets/image/flight_map.jpg';
 import DashBoardImage from '../../assets/image/dashboard.jpg';
-
+import underline from '../../assets/image/underline.png';
 import CustomButton from '../util/CustomButton';
 import useScrollFadeIn from '../util/fadeInProperty';
 function Project(){
@@ -53,14 +53,17 @@ function Project(){
     return(
         <section id="ProjectArchive">
             <section className="container">
-                
+                <div className="headline">
+                    <h1>Works</h1>
+                    <img className="underline" src={underline}></img>
+                </div>
                     <div className="WordContainer normal"></div>
                     <article className="ProjectContainer first">
                         <div className="ProjectInfo" {...upFadeIn}>
                         <strong>Flight Tracking Map</strong>
                         </div>
                         <div className="ImgContainer" {...upFadeInDelayed}>
-                        <img src={flightMapImage} width="800" height="400" style={{transform : `scale(${1+(scrollYoffset/10000)})`}}></img>
+                        <img src={flightMapImage} width="800" height="400"></img>
                         </div>
                         <div className="stacks" >
                             <li {...upFadeInStackFirst}>React JS</li>
@@ -78,7 +81,7 @@ function Project(){
                             <strong>Automatic Trainer</strong>
                             </div>
                         <div className="ImgContainer">
-                            <img src={DashBoardImage} width="800" height="600" style={{transform : `scale(${1+(scrollYoffset/14000)}`}}></img>
+                            <img src={DashBoardImage} width="800" height="600"></img>
                         </div>
                         <div className="stacks">
                             <li {...upFadeInStack2First}>React JS</li>

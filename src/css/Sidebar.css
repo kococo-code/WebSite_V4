@@ -15,7 +15,6 @@
 
 .sidebar_hidden{
     transform : translateX(50px);
-    transition : transform .4s;
 }
 #SideBar svg{
     margin-top : 20px;

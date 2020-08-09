@@ -1,6 +1,6 @@
 #ProjectArchive{
     position: absolute;
-    top : 1000px;
+    top : 4096px;
     left : 0px;
     width : 100%;
     height : 6000px;
@@ -85,17 +85,20 @@
 
 .ProjectContainer.first{
     position : absolute;
-    top: 800px;
+    top: 400px;
     left : 200px;
 }
 .ProjectContainer.second{
     position : absolute;
-    top: 2000px;
+    top: 1200px;
     left: 300px;
 }
 
+.ProjectContainer img{
+    animation : scaleIn ease 9s infinite alternate;
+}
 .ProjectContainer img:hover{
-    animation : scaleIn ease 12s infinite alternate;
+    animation-play-state: paused;
 }
 .ProjectContainer .ImgContainer{
     position: absolute;
@@ -161,6 +164,23 @@
     width : 100%;
     background: white;
 
+}
+
+#ProjectArchive .headline{
+    position : absolute;
+    left : 45%;
+    font-size : 64px;
+    font-family : 'Roboto' , sans-serif;
+    font-style : italic;   
+    overflow : hidden;
+}
+#ProjectArchive .underline{
+    position : absolute;
+    top : 120px;
+    left : -50px;
+    width : 310px;
+    height : 100px;
+    transition: all .4s;
 }
 
 @keyframes scaleIn{

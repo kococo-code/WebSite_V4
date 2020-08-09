@@ -4,24 +4,31 @@
     left : 0px;
     width : 100%;
     height : 80px;
-    z-index: 99;
+    z-index: 80;
     background-color: black;
     transition : all ease .5s;
-
 }
-#topbar_brand{
-    display : inline;
-    margin : 0 auto;
+#Topbar .underline{
+    position : absolute;
+    top : 50px;
+    left : 0px;
+    width : 120px;
+    height : 20px;
+}
+.topbar_brand{
+    position : absolute;
+    left : 45%;
     line-height : 80px;
-    overflow : hidden;
-    white-space: normal;
     color : white;
     font-family : 'Inter' , sans-serif;
     font-size : 30px;
     font-style : italic;
     cursor: pointer;
+    transition: all .4s;
 }
-
+.topbar_brand:hover{
+    transform : scale(1.2);
+}
 .nav-link{
     display : none;
     position : absolute;
@@ -39,6 +46,7 @@
 .topbar_hidden{
     transform : translateY(-80px);
 }
+
 #Topbar svg{
     position : absolute;
     top : 25px;
@@ -48,6 +56,35 @@
     transition: transform .4s;
     cursor: pointer;
 }
+
+
+#Topbar svg:hover{
+    transform : rotate(-90deg) scale(1.2);
+    animation: btnAnimate 1s ease infinite alternate ;
+    animation-delay: .4s;
+
+}
 #Topbar .reverse{
     transform: rotate(90deg);
+}
+#Topbar .reverse:hover{
+    transform : rotate(90deg) scale(1.2);
+    animation: reversebtnAnimate 1s ease infinite alternate ;
+    animation-delay: .4s;
+}
+@keyframes btnAnimate {
+    from{
+        transform : translateY(0) rotate(-90deg) scale(1.2);
+    }
+    to{
+        transform : translateY(-10px) rotate(-90deg) scale(1.2);
+    }
+}
+@keyframes reversebtnAnimate {
+    from{
+        transform : translateY(0) rotate(90deg) scale(1.2);
+    }
+    to{
+        transform : translateY(10px) rotate(90deg) scale(1.2);
+    }
 }

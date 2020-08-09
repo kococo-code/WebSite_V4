@@ -1,3 +1,5 @@
+.CustomButtonContainer{
+}
 .CustomButton{
     position: absolute;
     font-family: 'open sans',sans-serif;
@@ -5,9 +7,13 @@
     padding : 10px 12px 10px 12px;
     text-decoration: none;
     border-radius : 5px;
+    border : 1px solid white;
     color : white;
-    background-color: #3a5ce9;
     z-index: 33;
+}
+.CustomButtonContainer img{
+    width : 100px;
+    height : 50px;
 }
 .Github,
 .Demo{

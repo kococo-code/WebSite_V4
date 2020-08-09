@@ -6,7 +6,7 @@
     text-align: center;
     font-family : var(--robotoMono);
     writing-mode: vertical-lr;
-    z-index: 999;
+    z-index: 80;
     font-size : 16px;
     color : white;  
     transition : transform .4s;

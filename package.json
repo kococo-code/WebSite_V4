@@ -36,6 +36,7 @@
     "dev": "export MODE=development && webpack",
     "dev_windows": "set MODE=development && webpack",
     "start": "export MODE=development && webpack-dev-server",
-    "start_windows": "set MODE=development && webpack-dev-server"
+    "start_windows": "set MODE=development && webpack-dev-server",
+    "devlop_serving" : "node server/app.js"
   }
 }

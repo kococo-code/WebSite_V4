@@ -4,6 +4,8 @@
     --neongreen : #DFFF00;
     --robotoMono : 'Roboto Mono', monospace;
     --roboto : 'Roboto', sans-serif;
+    --undelineLime : url('../assets/image/underline2.png');
+    --circleLine : url('../assets/image/circle1.png');
 }
 ::selection{
     background-color: var(--oceanblue);

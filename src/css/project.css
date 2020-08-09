@@ -95,7 +95,7 @@
 }
 
 .ProjectContainer img{
-    animation : scaleIn ease 9s infinite alternate;
+    animation : scaleIn ease 7s infinite alternate;
 }
 .ProjectContainer img:hover{
     animation-play-state: paused;
@@ -166,28 +166,27 @@
 
 }
 
-#ProjectArchive .headline{
+#ProjectArchive .containerStartIndicator{
     position : absolute;
     left : 45%;
     font-size : 64px;
     font-family : 'Roboto' , sans-serif;
     font-style : italic;   
-    overflow : hidden;
+    
 }
-#ProjectArchive .underline{
+#ProjectArchive .containerStartIndicator img{
     position : absolute;
-    top : 120px;
-    left : -50px;
-    width : 310px;
-    height : 100px;
-    transition: all .4s;
-}
+    top : 60px;
+    left : -75px;
+    width : 350px;
+    height : 125px;
 
+}
 @keyframes scaleIn{
     from{
         transform : translateX(0px) scale(1.15);
     }
     to{
-        transform : translateX(30px) scale(1.0);
+        transform : translateX(10px) scale(1.0);
     }
 }

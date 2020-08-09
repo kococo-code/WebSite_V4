@@ -2,15 +2,20 @@ import React from 'react';
 
 
 export default function Welcome(){
+    
+    
+    
+    
+    
     return(
         <section id="Welcome">
             <div className="first">
-                <h1>Welcome !</h1> 
-                <h2>We are Loading</h2>
+                <div className="block">
+                    <h2>Wait I'm Loading</h2>
+                    <h3>Hold on Seconds!</h3>
+                </div>
             </div>
-            <div className="second">
-                <h1>Kococo</h1>
-            </div>
+            
         </section>
     )
 }

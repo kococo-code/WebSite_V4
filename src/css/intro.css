@@ -24,15 +24,13 @@
 #Introduce header h3{
     font-size : 40px;
 }
-#Introduce header .highlight::after{
-    content: '';
-    position: absolute;
-    left  :0px;
-    margin : 10px 0px 0px 0px;
+#Introduce header .highlight{
+    position : absolute;
+    top : 65px;
+    left : 450px;
+    width : 260px;
     height : 20px;
-    width : 100%;
-    z-index: -1;
-    background: #3a5ce9;
+    transform : rotate(180deg);
 }
 #Introduce img{
     position : absolute;
@@ -49,24 +47,49 @@
     left : 200px;
 
 }
-#Introduce .draw_second{
-    position: absolute;
-    top : 200px;
-    left : 400px;
-    z-index: 3;
+@media screen and (max-width : 1500px){
+    #Introduce .arrow{
+        position: absolute;
+        top : 30px;
+        left : 450px;
+        width : 150px;
+        height : 150px;
+        z-index: 3;
+    }
+    #Introduce .Information{
+        position : absolute;
+        top : 150px;
+        left : 45%;
+        font-family : 'Roboto Mono' , monospace;
+        transform : skewX(-7deg);
+        text-align : left;
+        color : white;
+    }
 }
+@media screen and (min-width : 1500px){
+    #Introduce .arrow{
+        position: absolute;
+        top : 0px;
+        left : 450px;
+        width : 250px;
+        height : 150px;
+        z-index: 3;
+    }
+    #Introduce .Information{
+        position : absolute;
+        top : 150px;
+        left : 32%;
+        font-family : 'Roboto Mono' , monospace;
+        transform : skewX(-7deg);
+        text-align : left;
+        color : white;
+    }
+}
+
+
 #Introduce .SecondPicture{
     position : absolute;
     top : 2000px;
     left : 0px;
     width : 100%;
-}
-#Introduce .Information{
-    position : absolute;
-    top : 200px;
-    left : 50%;
-    font-family : 'Roboto Mono' , monospace;
-    transform : skewX(-7deg);
-    text-align : left;
-    color : white;
 }

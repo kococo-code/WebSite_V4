@@ -6,11 +6,9 @@ const Observe = (setOnBoard, threshold=0.1) => {
         entries.forEach((entry)=>{
             if (entry.isIntersecting){
                 setOnBoard(1);
-                console.log('Show')
             }
             else{
                 setOnBoard(0);
-                console.log('None');    
             }
         })
     }

@@ -5,7 +5,7 @@ export default function Welcome(){
     
     
     
-    
+    console.log(window.pageYOffset);
     
     return(
         <section id="Welcome">

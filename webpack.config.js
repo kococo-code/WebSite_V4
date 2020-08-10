@@ -72,7 +72,8 @@ module.exports = {
                     {
                         loader: 'babel-loader'				
                     }
-                ]
+                ],
+            
             },
             // CSS Loader
             {

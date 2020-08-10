@@ -52,13 +52,13 @@
         position: absolute;
         top : 30px;
         left : 450px;
-        width : 150px;
+        width : 250px;
         height : 150px;
         z-index: 3;
     }
     #Introduce .Information{
         position : absolute;
-        top : 150px;
+        top : 200px;
         left : 45%;
         font-family : 'Roboto Mono' , monospace;
         transform : skewX(-7deg);

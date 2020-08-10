@@ -1,11 +1,11 @@
 #SideBar{
     position: fixed;
-    right : 0px;
+    right : 20px;
     width : 50px;
     height : 100%;
     text-align: center;
-    font-family : var(--robotoMono);
-    writing-mode: vertical-lr;
+    font-family : 'Roboto Mono',momospace;
+    writing-mode: tb-rl;
     z-index: 80;
     font-size : 16px;
     color : white;  

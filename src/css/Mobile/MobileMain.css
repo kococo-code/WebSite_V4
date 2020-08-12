@@ -5,20 +5,51 @@
     height : 2400px;
     text-align : center;
     width : 100%;
-    background : white; 
+    background : #edeae4; 
 }
 #Mobile_Header{
     position : absolute;
-    top : 150px;
+    top : 50px;
     width: 100%;
     height : 100px;
+    text-align : center;
+    color : black;
+}
+#MobileMain .wording{
     font-size : 24px;
     font-style : italic;
     font-family: 'Roboto Mono', monospace;
     text-align : center;
-    color : black;
 }
 #Mobile_Header p{
-    background-color: white;
+    background-color: #edeae4;
 
+}
+#Face{
+    margin-left : auto;
+    margin-right : auto;
+    margin-top : 250px;
+    width : 250px;
+    height : 325px;
+}
+
+#topBrand{
+    position : fixed;
+    top : 0px;
+    height : 100px;
+    width : 100%;
+    color : black;
+    font-family: 'Inter', sans-serif;
+    font-size : 32px;
+    font-style : italic;
+    text-align: center;
+    line-height: 80px;
+    transition : transform .5s;
+    z-index: 99;
+}
+#topBrand.visible{
+    transform : translateY(0px);
+}
+#topBrand.hidden{
+    transform : translateY(-100px);
 }

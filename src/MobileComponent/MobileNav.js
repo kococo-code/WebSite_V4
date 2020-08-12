@@ -47,7 +47,10 @@ export default function MobileNav(){
             <section className="Mobile_Nav-list hidden">
                 <a href="#MobileMain" onClick={handleNavbarClick}>StartPage</a>
                 <a href="#Mobile_Project" onClick={handleNavbarClick}>Project</a>
-                <a href="#MobileMain" onClick={handleNavbarClick}>Contact</a>
+                <a href="https://github.com/kococo-code" target="_blank" onClick={handleNavbarClick}>Github</a>
+                <div className="kococo9504_naver_com">
+                    <span style={{borderBottom : "3px solid black"}}>Thank You!</span>
+                </div>
 
             </section>
         </nav>

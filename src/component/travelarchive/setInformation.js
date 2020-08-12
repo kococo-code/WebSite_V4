@@ -1,11 +1,8 @@
 import React from 'react';
-import EXIF from 'exif-js';
-export default function setInformation(index,informations){
-   
-    const img = document.getElementsByClassName('PhotoPlace')[0];
-    EXIF.getData(img, function() {
-        let tags = EXIF.getAllTags(this, "Model");
-        console.log(tags);
-    })
-}
 
+export default function setInformation(index,informations){
+    const locationElement = document.getElementsByClassName('locationInfo')[0];
+    const dateElement = document.getElementsByClassName('dateInfo')[0];
+    locationElement.textContent = informations.location;
+    dateElement.textContent = informations.date;
+}

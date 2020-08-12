@@ -1,16 +1,19 @@
 import React from 'react';
-import DashBoard from '../assets/image/dashboard.jpg';
-import FlightMap from '../assets/image/flight_map.jpg';
-import underline from '../assets/image/underline2.png';
+import underline from '../assets/image/undeline_blue.png';
 
 export default function MobileProject(){
     
+
+    function handleProjectClick(e){
+        e.preventDefault();
+        console.log(e.target.data);
+    }
+
+
+
     return(
         <section id="Mobile_Project">
-            <div className="startIndicator">
-                <span>Project</span>                
-                <img src={underline}></img>
-            </div>
+                <p className="wording">Projects</p>
             <section id="Projects_Container">
                 <article className="Project first">
                     <h1>Flight Finder</h1>
@@ -25,6 +28,9 @@ export default function MobileProject(){
                         <li>AWS EC2</li>
                         <li>AWS RDS</li>
                    </div>
+                   <a className="Button github" target="_blank" href="https://github.com/kococo-code/React-Leaflet-deckgl">Github</a>
+                   <a className="Button demo">Demo</a>
+
                 </article>
                 <article className="Project second">
                     <h1>AutoMatic Trainer</h1>
@@ -37,6 +43,8 @@ export default function MobileProject(){
                         <li>Tensorflow</li>
                         <li>D3.JS</li>
                     </div>
+                    <a className="Button github" target="_blank" href="https://github.com/kococo-code/Tensorflow_Automatic_Training">Github</a>
+                   <a className="Button demo">Demo</a>
                 </article>
                 <article className="Project third">
                     <h1>DES</h1>
@@ -48,9 +56,10 @@ export default function MobileProject(){
                         <li>C/C++</li>
                         <li>Encryption</li>
                     </div>
+                    <a className="Button github-des" target="_blank" href="https://github.com/kococo-code/des">Github</a>
                 </article>
                 <div className="underline">
-                    Click the Card!
+                    Hover on Card!
                 </div>
             </section>
         </section>

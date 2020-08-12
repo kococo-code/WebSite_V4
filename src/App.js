@@ -4,7 +4,7 @@ import SideBar from './component/Sidebar';
 import MobileMain from './MobileComponent/MobileMain';
 function App(){
     let InnerWidthSize = window.innerWidth;
-    if(InnerWidthSize <= 768){
+    if(InnerWidthSize <= 1000){
         /// Mobile
         return(
             <MobileMain></MobileMain>

@@ -28,7 +28,6 @@ def sendInformation():
     else:
         files= glob.glob('./'+params['target'] + '/*.json')
         if(len(files) != 0):
-            print(files[0])
             jsonptr = open(files[0],'r')
             jsonfile = json.load(jsonptr)
             return make_response(jsonfile,200)

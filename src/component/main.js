@@ -6,16 +6,7 @@ import Welcome from './Welcome';
 import TravelArchive from './travelarchive/travelArchive';
 
 export default function Main(){
-    if(window.navigator.userAgent.indexOf('Trident')===true){
-        /// IE 
-        return(
-            <div id="IE">
-                Not Support
-            </div>
-        )
-    }
-    else{
-        return(
+    return(
             <div>
                 <Topbar></Topbar>
                 <Introduce></Introduce>
@@ -23,7 +14,7 @@ export default function Main(){
                 <Project></Project>
             </div>
         )
-    }
+    
  
       
             

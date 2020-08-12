@@ -1,0 +1,114 @@
+#Mobile_Navbar{
+
+}
+/*
+ Hamburger Style
+*/
+#Mobile_Navbar .Hamburger{
+    position : fixed;
+    right : 3%;
+    top : 10px;
+    width : 50px;
+    height : 50px;
+    background-color: white;
+    border-radius : 50%;
+    cursor : pointer;
+    border : 1px solid black;
+    z-index: 6;
+}
+#Mobile_Navbar .Hamburger:hover{
+
+}
+#Mobile_Navbar .line{  
+    width : 25px;
+    height : 2px;
+    background: #000;
+    margin-top : 5px;
+    margin-left : 13px;
+}
+#Mobile_Navbar .first{
+    margin-top : 17px;
+}
+#Mobile_Navbar .close.hidden{
+    transform : translateX(1000px);
+}
+#Mobile_Navbar .close.down{
+    margin-top : 7px;
+    transform : translate3d(0px,16px,0px) rotate(45deg);
+}
+#Mobile_Navbar .close.up{
+    transform : translate3d(0px,2px,0px) rotate(-45deg);
+}
+/*
+    Navigation List Style
+*/
+.Mobile_Nav-list{
+    transition : all 1s;
+}
+.Mobile_Nav-list.hidden{
+    display: none;
+    z-index : -1;
+    opacity : 0;
+}
+.Mobile_Nav-list.visible{
+    display : flex;
+    flex-direction: column;
+    position : fixed;
+    top : 5%;
+    left : 5%;
+    width : 90%;
+    height : 90%;
+    z-index: 4;
+    opacity: 1;
+    text-align : left;
+    background : white;
+    border-radius : 15px;
+    border : 1px solid black;
+}
+.Mobile_Nav-list a{
+    font-family : 'Inter', sans-serif;
+    font-size : 32px;
+    font-weight : 400;
+    margin-top : 40px;
+    margin-left : 15px;
+    cursor : pointer;
+    z-index: 5;
+    text-decoration: none;
+    color : black;
+    animation : fadeIn .4s forwards;
+}
+/*
+    Background
+*/
+#NavBackground.visible{
+    z-index: 4;
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    background-color: rgba(22,22,22,.4);
+    width : 100%;
+    height : 100%;
+}
+#NavBackground.hidden{
+    display :none;
+    z-index: 0;
+}
+
+@keyframes fadeInNonTranslate{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity :1;
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity :0;
+        transform : translateY(-5px); 
+    }
+    to{
+        opacity :1;
+        transform : translateY(0px);
+    }
+}

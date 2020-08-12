@@ -1,0 +1,174 @@
+#Mobile_Project{
+    position : absolute;
+    top :  1024px;
+    width : 100%;
+    height : 1050px;
+    z-index: 3;
+}
+/*
+Project Start Name
+*/
+#Mobile_Project .startIndicator{
+    display : flex;
+    flex-direction: column;
+    width :100%;
+    height : 50px;
+    font-family: 'Inter',sans-serif;
+    font-size : 32px;
+    font-style : italic;
+    text-align: center;
+}
+
+#Mobile_Project .startIndicator img{
+    width : 130px;
+    height : 30px;
+    margin : 0 auto;
+    transform : translateY(-6px);
+}
+
+/*
+Project Container Style
+*/
+#Projects_Container{
+    position : absolute;
+    top : 100px;
+    width : 100%;
+    height : 600px;
+    background : #e5e5e5;
+    border-top : 1px solid black;
+    border-bottom : 1px solid black;
+    overflow : hidden;
+}
+#Projects_Container .Project{
+    width : 70%;
+    height : 300px;
+    border : 1px solid black;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+/*
+Project Inside Information 
+*/
+#Projects_Container h1{
+    font-size : 28px; 
+    line-height: 0px;  
+    margin-left : 2px;
+    font-style : italic;
+    font-family : 'Roboto' ,sans-serif;
+}
+#Projects_Container .ProjectExplain{
+    position: absolute;
+    top : 100px;
+    width : 100%;
+    margin : 0 auto;
+    font-family : 'Roboto Mono' ,monospace;
+    font-size : 13px;
+    font-style : italic;
+}
+#Projects_Container .Stacks{
+    position : absolute;
+    top : 150px;
+    left : 0px;
+    width : 100%;
+    height : 50px;
+    font-family : 'Roboto Mono' , monospace;
+    font-size : 13px;
+    list-style: none;
+    text-align: left;
+    margin-top : 10px;
+}
+#Projects_Container .Stacks li{
+    display : inline-block;
+    margin : 5px;
+    padding : 2px;
+    border : 1px solid black;
+    border-radius : 5px;
+    color : #222222;
+    background : #9bff92;
+}
+#Projects_Container .Stacks li:hover{
+    animation : shake .5s ease infinite alternate;
+}
+#Projects_Container .Project.first{
+    position : absolute;
+    top : 50px;
+    height : 500px;
+    left : 5%;
+}
+#Projects_Container .Project.second{
+    position : absolute;
+    top : 150px;
+    height : 400px;
+    right : 2%;   
+    z-index: 2;
+}
+#Projects_Container .Project.third{
+    position : absolute;
+    top : 250px;
+    left : 3%;   
+    z-index: 3;
+}
+#Projects_Container .Project.first:hover{
+    z-index: 10;
+    background-color : tomato;
+    transform : translateY(-30px);
+}
+#Projects_Container .Project.second:hover{
+    z-index: 10;
+    background : #3ace3a;
+    transform : translateY(-30px);
+
+}
+#Projects_Container .Project.third:hover{
+    z-index: 10;
+    background : #3a5ce9;
+    transform : translateY(-30px);
+
+}
+#Projects_Container .underline {
+    position : absolute;
+    top : 500px;
+    width : 100%;
+    height : 100px;
+    background: #e5e5e5;
+    border-top : 1px solid black;
+    z-index: 11;
+    font-family : 'Roboto Mono', monospace;
+    font-size : 20px;
+    line-height: 100px;
+}
+/********** 
+    Button  
+***********/
+#Projects .button{
+    text-decoration: none;
+    width : 70px;
+    height : 30px;
+    font-size : 16px;
+    font-family : 'Inter' ,sans-serif;
+    font-style : italic;
+    background-color: rgba(0,0,0,.5);
+    line-height: 30px;
+    border-radius : 5px;
+    text-align :center;
+    color : white;
+    margin-left : 10px;
+    padding : 5px;
+    transform : translate3d(-30px , -50px,0px);
+}
+#Projects .demo{
+
+}
+
+
+
+@keyframes shake{
+    from{
+        transform : rotate(-5deg);
+    }
+    to{
+        transform : rotate(5deg);
+    }
+}

@@ -23,8 +23,18 @@
     left : 70px;
     width : 450px;
     height : 200px;
-    border : 1px solid white;
     font-family: 'Roboto Mono',monospace;
-    font-size : 16px;
+    font-size : 20px;
+    font-style : italic;
+}
 
+.ParanomaBox .locationInfo{
+    position : absolute;
+    top : 20px;
+    left : 20px;
+}
+.ParanomaBox .dateInfo{
+    position : absolute;
+    top : 70px;
+    left : 20px;
 }

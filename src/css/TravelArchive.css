@@ -71,7 +71,9 @@
     line-height : 1px;
 }
 .MemoryBox h2{
-    margin : 200 auto;
+    position : absolute;
+    bottom : 10%;
+    left : 21%;
     color : white;
     font-style : italic;
 }
@@ -96,7 +98,17 @@
     fill : #cbff0f;
     cursor: pointer;
 }
-
+#TravelArchive h1{
+    font-size : 64px;
+    z-index: 2;
+}
+#TravelArchive .underline{
+    position: absolute;
+    top : 120px; 
+    left : 43%;
+    width : 220px;
+    height : 30px;
+}
 @keyframes BackgroundImageMovement{
     from{
         transform : translate3d(-30px,-800px,-1px) scale(1.2);

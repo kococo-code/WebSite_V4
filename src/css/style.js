@@ -19,3 +19,9 @@ import './PictureDisplay.css';
 // Project
 import './Project.css';
 import './CustomButton.css';
+
+
+//Mobile
+import './Mobile/MobileMain.css';
+import './Mobile/MobileNav.css';
+import './Mobile/MobileProject.css';

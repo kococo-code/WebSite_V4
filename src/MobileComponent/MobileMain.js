@@ -1,7 +1,7 @@
 import React ,{useEffect,useState} from 'react';
 import MobileNav from './MobileNav';
 import MobileProject from './MobileProject';
-import MobileTextTransition from './MobileTransition';
+import MobileWhoamI from './MobileWhoamI';
 import Face from '../assets/image/face3.jpg';
 export default function MobileMain(){
     return (
@@ -14,7 +14,7 @@ export default function MobileMain(){
             <a target="_blank" href="https://instagram.com/__jinnn.oto__"><img id="Face" src={Face}></img></a>
             <p className="wording">It`s Me!</p>
 
-            <MobileTextTransition></MobileTextTransition>
+            <MobileWhoamI></MobileWhoamI>
             <MobileProject></MobileProject>
         </div>
     )

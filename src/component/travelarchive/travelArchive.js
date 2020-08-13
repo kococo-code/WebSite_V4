@@ -1,95 +1,109 @@
 import React , {useEffect,useState} from 'react';
-import Siberia from '../../assets/image/Siberia.jpg';
-import Himalaya from '../../assets/image/Himalaya.jpg';
-import Budapest from '../../assets/image/budapest.jpg';
-import Copacabana from '../../assets/image/copacabana.jpg';
-import AsyncPictureGet from './PictureDisplay';
-import PictureInformation from './PictureInformation';
-import setInformation from './setInformation';
+import RightPictureContainer from './PictureRight'
+import CenterPictureContainer from './PictureCenter';
+import LeftPictureContainer from './PictureLeft';
 export default function TravelArchive(){
-
-    const [currentJSONInfo , setJSONInfo] = useState('');
-
-    function PictureDisplay(target){
-        const locationBox = document.getElementsByClassName('locationBox')[0];
-        switch(target){
-            case 'Europe':
-                locationBox.textContent = 'Europe';
-                break;
-            case 'Siberia':
-                locationBox.textContent = 'Siberia Train and Arctic';
-
-                break;
-            case 'India':
-                locationBox.textContent = 'India and SE Asia';
-
-                break;
-            case 'SA':
-                locationBox.textContent = 'South America';
-
-                break;
-        }
-        AsyncPictureGet(target);
-        PictureInformation(target,setJSONInfo);
-        console.log(currentJSONInfo);
-        setInformation(1,currentJSONInfo);
-
+    const [mousePos,setMousePos] = useState({x:0,y:0});
+    const [mouseDirection , setMouseDirection] = useState({x:0,y:0});
+    const [pastPos , setPastPos] = useState({x:0,y:0});
+    const params = {
+        'X_MoveMentTick' : 10,
+        'Y_MoveMentTick' : 7,
+        'gradientDivideScale' : 10,
+        'titleMovementScale' : .05,
+        'biosMovementScale' : .1,
+        'randomCodeIntervalIterateTime' : 9
     }
-    
-    function handleonClick(e){
-        const ParanomaBox = document.getElementsByClassName('ParanomaBox')[0];
-        if(e.target.className === 'BackBtn'){
-            ParanomaBox.setAttribute('class' ,`ParanomaBox`);
-            ParanomaBox.style = "z-index :-1 ; opacity : 0";
-        }
-        else{
-            console.log(e.target.className.split(' ')[0])
-            ParanomaBox.setAttribute('class' ,`ParanomaBox ${e.target.className.split(' ')[0]}`);
-            ParanomaBox.style = "z-index :3 ; opacity : 1";
-            PictureDisplay(e.target.className.split(' ')[0]);
+    const central = {
+        'y' :window.innerHeight /2,
+        'x' : window.innerWidth /2
+    }
+       
+
+    function handleMousePosition(e){
+        if(window.pageYOffset < 2400){
+            const x_gradient = (central.x - e.clientX)/params.gradientDivideScale;
+            const y_gradient = (central.y - e.clientY)/params.gradientDivideScale;
+            const x_Movement = (pastPos.x + x_gradient)*params.X_MoveMentTick;
+            const y_Movement = (pastPos.y + y_gradient)*params.Y_MoveMentTick;
+            setPastPos({x:x_Movement,y:y_Movement});
+            setMousePos({x:x_Movement,y:y_Movement});
         }
     }
-    
-    
+    function bioAnimationHandler(){
+        const bios = document.getElementsByClassName('bios');
+        console.log(bios);  
+        bios.forEach((key)=>{
+            key.style.transform = `translate3d(${mousePos.x * params.biosMovementScale}px,${mousePos.y * params.biosMovementScale}px,0)`;
+        })
+    }
+    function fadeIn(){
+        const bios = document.getElementsByClassName('bios');
+        if(window.pageYOffset > 650){
+            if(bios.length >= 1){
+                bios.forEach((key,value)=>{
+                    key.setAttribute('class','bios fadeIn');
+                })
+            }
+        }else{
+            if(bios.length >= 1){
+                bios.forEach((key,value)=>{
+                    key.setAttribute('class','bios');
+                })
+            }
+        }
+    }
+    function handleScroll(){}
+    useEffect(()=>{
+        window.addEventListener('mousemove',handleMousePosition);
+        window.addEventListener('scroll',handleScroll);
+        return ()=>{
+            window.removeEventListener('mousemove',handleMousePosition);
+            window.removeEventListener('scroll',handleScroll);
+
+        }
+    },[])
+    useEffect(()=>{
+        bioAnimationHandler()
+    },[]);
+    function onClick(e){
+        const target = e.target.getAttribute('value');
+        const charSet = '1234567890!@#$%^&*()QWERTYUIOPQASDFGHJKLZXCVBNM';
+        const randomNum = (modIndex) => Math.ceil((Math.random() * 1000)) % (modIndex-1);
+        const randomCodeGenerator = (codeLength) => {
+            let result = '';
+            for(let i =0 ; i< codeLength ; i++){
+                result += charSet[randomNum(charSet.length)];
+            }
+            return result;
+        }
+        let i= 0;
+        
+        if(target!=null){
+            const location = target.split(' ')[0];
+            const latlng = target.split(' ')[1].split('&');
+            const locationElement = document.getElementById('Location');
+            const latlngElement = document.getElementById('latlng');
+            let randomCodeInterval = setInterval(()=>{
+                locationElement.textContent = (randomCodeGenerator(location.length));
+                latlngElement.textContent = randomCodeGenerator(17);
+                i++;
+                if(i===params.randomCodeIntervalIterateTime){
+                    locationElement.textContent = location;
+                    latlngElement.textContent = latlng[0] + ' ' + latlng[1]; 
+                  
+                    clearInterval(randomCodeInterval);
+                }
+            },90)
+        }
+    }
     return (
         
-        <section id="TravelArchive">
-            <div className="containerStartIndicator">
-                    <h1>Travel</h1>
-                </div>
-            <section className="Boxcontainer">
-                <article className="MemoryBox Europe" onClick={handleonClick}>
-                    <h1>Europe</h1>
-                    <h2>2016.05 - 2016.07</h2>
-                    <img className="Europe image_reverse" src={Budapest} width={1000} height={1000}></img>
-                </article>
-                <article className="MemoryBox Siberia"  onClick={handleonClick}>
-                        <h1>Siberia Train <p>and</p> Arctic</h1>
-                        <h2>2017.07 - 2017.08</h2>
-                        <img className="Siberia" src={Siberia}></img>
-                </article>
-                <article className="MemoryBox India" onClick={handleonClick}>
-                        <h1>India <p>and</p> SE Asia</h1>
-                        <h2>2019.01 - 2019.03</h2>
-                        <img className="India image_reverse" src={Himalaya} width={800} height={1000}></img>
-                </article>
-                <article className="MemoryBox SA" onClick={handleonClick}>
-                        <h1>South America</h1>
-                        <h2>2019.12 - 2020.02</h2>
-                        <img className="SA" src={Copacabana} width={800} height={1000}></img>
-                </article>
-                <article className="ParanomaBox">
-                        <div className="locationBox"></div>
-                        <img className="PhotoPlace"></img>
-                        <div className="PictureInformation">
-                            <div className="dateInfo"></div>
-                            <div className="locationInfo"></div>
-                        </div>
-                        <div className="BackBtn" onClick={handleonClick}>
-                            Back
-                        </div>
-                </article>
-            </section>
+        <section id="TravelArchive" onClick={onClick}>       
+            <LeftPictureContainer mousePos={mousePos} ContainerMovementScale={1} biosMovementScale={params.biosMovementScale}></LeftPictureContainer>
+            <RightPictureContainer mousePos={mousePos} ContainerMovementScale={1} biosMovementScale={params.biosMovementScale}></RightPictureContainer>
+            <CenterPictureContainer mousePos={mousePos} ContainerMovementScale={1.2} biosMovementScale={params.biosMovementScale} titleMovementScale={params.titleMovementScale}></CenterPictureContainer>
+            <div id="PictureExplorer"></div>
 
 
         </section>

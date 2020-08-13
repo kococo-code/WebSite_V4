@@ -56,7 +56,9 @@ function Project(){
                             <li>AWS EC2</li>
                             <li>AWS RDS</li>
                         </div>
-                    
+                        <div className="Explain">
+                            Flight Finder for 
+                        </div>
 
                     </article>
                     <article className="ProjectContainer second" >
@@ -75,7 +77,9 @@ function Project(){
                             <li>Tensorflow</li>
                             <li>Rechart Js</li>
                         </div>
-                       
+                        <div className="Explain">
+                        
+                        </div>
 
                     </article>
                     <div className="threshold" />

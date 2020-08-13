@@ -22,6 +22,7 @@ module.exports = {
         hot : true,
         inline : true,
         overlay : true,
+        open : true,
     },
     optimization :{
         minimize : true,

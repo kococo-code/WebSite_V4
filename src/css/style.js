@@ -14,7 +14,6 @@ import './intro.css';
 
 // Travel Archive
 import './TravelArchive.css';
-import './PictureDisplay.css';
 
 // Project
 import './Project.css';

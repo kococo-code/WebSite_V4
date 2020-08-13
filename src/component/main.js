@@ -4,7 +4,6 @@ import Introduce from './Introduce/Introduce';
 import Project from './Project/project';
 import Welcome from './Welcome';
 import TravelArchive from './travelarchive/travelArchive';
-
 export default function Main(){
     return(
             <div>

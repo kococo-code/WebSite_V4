@@ -18,7 +18,7 @@
     transition: background-color .5s;
 }
 #Mobile_Navbar .Hamburger:hover{
-    background-color: var(--lime);
+    background-color: #edeaee;
 }
 #Mobile_Navbar .line{  
     width : 25px;

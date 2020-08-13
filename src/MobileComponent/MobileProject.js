@@ -1,5 +1,4 @@
 import React from 'react';
-import underline from '../assets/image/undeline_blue.png';
 
 export default function MobileProject(){
     
@@ -43,6 +42,7 @@ export default function MobileProject(){
                         <li>Tensorflow</li>
                         <li>D3.JS</li>
                     </div>
+                    
                     <a className="Button github" target="_blank" href="https://github.com/kococo-code/Tensorflow_Automatic_Training">Github</a>
                    <a className="Button demo">Demo</a>
                 </article>

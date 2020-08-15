@@ -1,0 +1,109 @@
+.map_switch {
+    position: absolute;
+    top:60px;
+    left:73px;
+    display: inline-block;
+    width: 65px;
+    height: 20px;
+    background-color: rgba(0,0,0,.3);
+    color: #000;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    z-index: 2;
+  }
+  .map_switch:hover{
+      background-color: rgba(0,0,0,.5);
+  }
+  .map_switch.off,
+  .map_switch.on {
+    border : 1px solid transparent;
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+
+  }
+  
+  .map_switch.off:before,
+  .map_switch.off:after {
+    -webkit-transition: 0.6s;
+    transition: all 0.6s;
+
+  }
+  .map_switch.off:hover{
+    opacity: 1;
+  }
+  .map_switch.on:before,
+  .map_switch.on:after {
+    -webkit-transition: 0.6s;
+    transition: all 0.6s;
+  }
+  
+  .map_switch.off:before
+  {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 5px;
+    top: 1px;
+    background-color : Grey;
+    border : 1px solid white;
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0.3;
+  }
+  .map_switch.off:before:hover{
+      opacity: 1;
+  }
+
+  .map_switch.on:before{
+    display: block;
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 5px;
+    top: 1px;
+    border : 1px solid white;
+    background-color : #be9f99;
+    border-radius: 50%;
+    z-index: 2;
+
+  }
+  
+  .map_switch.off:after {
+    display: block;
+    position: absolute;
+    content: "";
+    -o-transform: rotate(-270deg);
+    -webkit-transform: rotate(-270deg);
+    -ms-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+    left: 17px;
+    top: 15px;
+    z-index: 2;
+    opacity : 0.3;
+
+  }
+  
+  .map_switch.on:before {
+  
+    -webkit-transform: translateX(38px);
+    -ms-transform: translateX(38px);
+    transform: translateX(38px);
+    z-index: inherit;
+  }
+  
+  .map_switch.on:after {
+    position: absolute;
+    content: "";
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: 56px;
+    top: 15px;
+    z-index: inherit;
+  }
+  

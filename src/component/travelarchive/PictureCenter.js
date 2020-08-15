@@ -14,7 +14,7 @@ export default function CenterPictureContainer(props){
                     <p style={{transform:`translate3d(${mousePos.x*titleMovementScale}px,${mousePos.y*titleMovementScale}px,0px)`}}>
                         260days of Memories
                     </p>
-                    <img src={Circle} className="Circle"></img>
+                    <img className="Circle" src={Circle} className="Circle"></img>
                     <p id="Location"></p>
                     <p id="latlng"></p>
                 </div>

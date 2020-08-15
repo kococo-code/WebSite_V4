@@ -11,6 +11,7 @@
     z-index: 2;
     transition: all .1s;
 }
+
 #ProjectArchive .container{
     position: absolute;
     display: flex;
@@ -21,6 +22,7 @@
     height : 100%;
     z-index: 1;
     overflow :hidden;
+
 }
 
 .ProjectContainer{
@@ -121,15 +123,19 @@
 
 #ProjectArchive .containerStartIndicator{
     position : absolute;
-    left : 45%;
-    font-size : 64px;
+    top : 10px;  
+    left : 50%;
     font-family : 'Roboto' , sans-serif;
     font-style : italic;   
-    
+    text-align: center;
+}
+#ProjectArchive .containerStartIndicator h1{
+    font-size : 80px;
+    margin : 0 auto;    
 }
 #ProjectArchive .containerStartIndicator img{
     position : absolute;
-    top : 60px;
+    top : -10px;
     left : -75px;
     width : 350px;
     height : 125px;

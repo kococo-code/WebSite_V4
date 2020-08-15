@@ -57,12 +57,16 @@
     color : #f5f5f7;
     font-style : italic;
 }
+
 #PictureCenter .Circle{
     position : absolute;
     top : 0px;
-    width : 150px;
+    width : 120px;
     height : 600px;
-    transform : translate3d(-100px,-220px,0px)rotate(-90deg);
+    transform : translate3d(-80px,-260px,0px)rotate(-90deg);
+}
+#PictureCenter .Circle:hover{
+    transform : translate3d(-80px,-260px,0px) scale(1) rotate(-90deg);
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     #PictureCenter .Circle{
@@ -74,9 +78,7 @@
    
 }
     
-#PictureCenter .Circle:hover{
-    transform : translate3d(-100px,-220px,0px) scale(1) rotate(-90deg);
-}
+
 #PictureCenter #latlng{
     line-height : 10px;
 }

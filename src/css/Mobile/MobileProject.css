@@ -61,6 +61,7 @@ Project Inside Information
 #Projects_Container h1{
     font-size : 28px; 
     line-height: 0px;  
+    margin-top : 40px;
     margin-left : 2px;
     font-style : italic;
     font-family : 'Roboto' ,sans-serif;

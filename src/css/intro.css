@@ -12,14 +12,14 @@
 #Introduce header{
     position : absolute;
     top : 200px;
-    left : 20%;
+    left : 22%;
     color : white;
     font-family : 'Roboto Mono' , monospace;
     font-weight : 200;
     font-size : 32px;
     text-align : left;
     margin : 0 auto;
-    line-height : 15px;   
+    line-height : 30px;   
     
 }
 #Introduce header h3{
@@ -29,7 +29,7 @@
 }
 #Introduce header .highlight{
     position : absolute;
-    top : 65px;
+    top : 35px;
     left : 450px;
     width : 260px;
     height : 20px;
@@ -45,54 +45,3 @@
 }
 
 
-#Introduce .face2{
-    position: absolute;
-    left : 200px;
-
-}
-@media screen and (max-width : 1500px){
-    #Introduce .arrow{
-        position: absolute;
-        top : 30px;
-        left : 450px;
-        width : 250px;
-        height : 150px;
-        z-index: 3;
-    }
-    #Introduce .Information{
-        position : absolute;
-        top : 200px;
-        left : 45%;
-        font-family : 'Roboto Mono' , monospace;
-        transform : skewX(-7deg);
-        text-align : left;
-        color : white;
-    }
-}
-@media screen and (min-width : 1500px){
-    #Introduce .arrow{
-        position: absolute;
-        top : 0px;
-        left : 450px;
-        width : 250px;
-        height : 150px;
-        z-index: 3;
-    }
-    #Introduce .Information{
-        position : absolute;
-        top : 150px;
-        left : 32%;
-        font-family : 'Roboto Mono' , monospace;
-        transform : skewX(-7deg);
-        text-align : left;
-        color : white;
-    }
-}
-
-
-#Introduce .SecondPicture{
-    position : absolute;
-    top : 2000px;
-    left : 0px;
-    width : 100%;
-}

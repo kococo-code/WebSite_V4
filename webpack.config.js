@@ -6,11 +6,13 @@ const TerserPlugin = require('terser-webpack-plugin'); // Uglify
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+
 const MODE = process.env.MODE.trim().toLowerCase() == 'development' ? 'development' : 'production';
 module.exports = {    
     mode : MODE,
     entry: {
-        main : path.resolve(__dirname ,'./src', 'index.js'),                            
+        main : path.resolve(__dirname ,'./src', 'index.js'),
     },
     output: {                                           
         path: path.join(__dirname, '/build'),    
@@ -23,6 +25,8 @@ module.exports = {
         inline : true,
         overlay : true,
         open : true,
+        historyApiFallback: true,
+
     },
     optimization :{
         minimize : true,
@@ -63,7 +67,7 @@ module.exports = {
         runtimeChunk : false,       
         
     },
-    module: {                                           
+    module: {                                          
         rules: [
             // React Babel Loader
             {

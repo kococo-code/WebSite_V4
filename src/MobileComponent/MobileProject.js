@@ -28,7 +28,7 @@ export default function MobileProject(){
                         <li>AWS RDS</li>
                    </div>
                    <a className="Button github" target="_blank" href="https://github.com/kococo-code/React-Leaflet-deckgl">Github</a>
-                   <a className="Button demo">Demo</a>
+                   <a className="Button demo" href="/flights">Demo</a>
 
                 </article>
                 <article className="Project second">
@@ -44,7 +44,7 @@ export default function MobileProject(){
                     </div>
                     
                     <a className="Button github" target="_blank" href="https://github.com/kococo-code/Tensorflow_Automatic_Training">Github</a>
-                   <a className="Button demo">Demo</a>
+                   <a className="Button demo" href="/Dashboard">Demo</a>
                 </article>
                 <article className="Project third">
                     <h1>DES</h1>

@@ -44,7 +44,7 @@ function Project(){
                         <div className="ProjectInfo">
                         <strong>Flight Tracking Map</strong>
                         <CustomButton targetUrl="https://github.com/kococo-code/React-Leaflet-deckgl" name="Github" top="20px" left="550px"/>
-                        <CustomButton targetUrl="/demo" name="Demo" top="20px" left="670px"/>
+                        <CustomButton targetUrl="/flights" name="Demo" top="20px" left="670px"/>
                         </div>
                         <div className="ImgContainer">
                         <img src={flightMapImage} width="800" height="400"></img>
@@ -57,7 +57,6 @@ function Project(){
                             <li>AWS RDS</li>
                         </div>
                         <div className="Explain">
-                            Flight Finder for 
                         </div>
 
                     </article>
@@ -65,7 +64,7 @@ function Project(){
                         <div className="ProjectInfo trainer">
                             <strong>Automatic Trainer</strong>
                             <CustomButton targetUrl="https://github.com/kococo-code/Tensorflow_Automatic_Training" name="Github" top="20px" left="500px"/>
-                            <CustomButton targetUrl="/demo" name="Demo" top="20px" left="620px"/>
+                            <CustomButton targetUrl="/Dashboard" name="Demo" top="20px" left="620px"/>
                             </div>
                         <div className="ImgContainer">
                             <img src={DashBoardImage} width="800" height="600"></img>

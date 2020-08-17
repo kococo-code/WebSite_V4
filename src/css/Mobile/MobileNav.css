@@ -36,20 +36,20 @@
 #Mobile_Navbar .close.down{
     background : #000;
     margin-top : 7px;
-    transform : translate3d(-10px,16px,0px) rotate(45deg);
+    transform : translate3d(0px,16px,0px) rotate(45deg);
 }
 #Mobile_Navbar .close.down:hover{
     background : #000;
     margin-top : 7px;
-    transform : translate3d(-10px,16px,0px) rotate(45deg);
+    transform : translate3d(0px,16px,0px) rotate(45deg);
 }
 #Mobile_Navbar .close.up{
     background : #000;
-    transform : translate3d(-10px,2px,0px) rotate(-45deg);
+    transform : translate3d(0px,2px,0px) rotate(-45deg);
 }
 #Mobile_Navbar .close.up:hover{
     background : #000;
-    transform : translate3d(-10px,2px,0px) rotate(-45deg);
+    transform : translate3d(0px,2px,0px) rotate(-45deg);
 }
 
 /*

@@ -45,7 +45,7 @@ export default function Topbar(){
             //const projectElementHeight = projectElement.getBoundingClientRect();
             //console.log(projectElementHeight);
             window.scrollTo({
-                top : 4096,
+                top : 2700,
                 behavior: 'auto'
             });
         }
@@ -60,7 +60,7 @@ export default function Topbar(){
         
     }
     function brandChanger(){
-        if(window.pageYOffset >= 4096){
+        if(window.pageYOffset >= 2700){
             setBrandName('Project');
         }else{
             setBrandName('Kococo'); 

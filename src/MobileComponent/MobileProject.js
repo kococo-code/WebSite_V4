@@ -44,7 +44,7 @@ export default function MobileProject(){
                     </div>
                     
                     <a className="Button github" target="_blank" href="https://github.com/kococo-code/Tensorflow_Automatic_Training">Github</a>
-                   <a className="Button demo" href="/Dashboard">Demo</a>
+                   <a className="Button demo" href="/dashboard">Demo</a>
                 </article>
                 <article className="Project third">
                     <h1>DES</h1>

@@ -5,11 +5,6 @@ import './css/style.js';
 import 'core-js/stable'
 import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-import {BrowserRouter} from 'react-router-dom';
-import Router from './AppRouter';
-ReactDOM.render(
-    <BrowserRouter>
-        <Router />
-    </BrowserRouter>,
-document.getElementById('root'));
+import 'react-app-polyfill/stable'; 
+import 'babel-polyfill'; // Cover IE3
+ReactDOM.render(<App />,document.getElementById('root'));

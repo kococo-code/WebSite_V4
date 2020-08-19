@@ -1,5 +1,11 @@
 import React, {useRef, useEffect} from 'react';
 
+/*
+    Observe is element visible Observer 
+    => https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API
+    But under ie 11 is not Support, So Not Used
+*/
+
 const Observe = (setOnBoard, threshold=0.1) => {
     const dom = useRef();
     const callback = (entries , observer)=>{

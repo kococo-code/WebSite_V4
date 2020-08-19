@@ -3,7 +3,20 @@ import Main from './component/main';
 import SideBar from './component/Sidebar';
 import MobileMain from './MobileComponent/MobileMain';
 function App(){
-    let InnerWidthSize = window.innerWidth;
+  console.log(`
+  ================================================================
+|     __  ___   ______    _____    ______    _____    ______       |
+|    |  |/  /  |  __  |  |   __|  |  __  |  |   __|  |  __  |      |
+|    |  '  /   | |  | |  |  |     | |  | |  |  |     | |  | |      |
+|    |  .  \\   | |__| |  |  |__   | |__| |  |  |__   | |__| |      |
+|    |__|\\__\\  |______|  |_____|  |______|  |_____|  |______|      |
+|                                                                  |                                              
+|              kococo9504@naver.com, +82 10-4312-9504              |
+  ================================================================ `)
+   
+
+
+    const InnerWidthSize = window.innerWidth;
     if(InnerWidthSize <= 1000){
         /// Mobile
         return(
@@ -12,6 +25,7 @@ function App(){
     }
     else{
       return(  
+        /// DeskTop
         <div>
           <Main></Main>
           <SideBar></SideBar>

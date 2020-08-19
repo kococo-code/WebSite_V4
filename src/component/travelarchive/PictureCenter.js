@@ -9,7 +9,7 @@ export default function CenterPictureContainer(props){
     const titleMovementScale = props.titleMovementScale;
     const ContainerMovementScale = props.ContainerMovementScale;
     return (
-        <section id="PictureCenter" will-change="transform" style={{transform:`translate3d(${mousePos.x*ContainerMovementScale}px,${mousePos.y*ContainerMovementScale}px,0px)`}}>
+        <section id="PictureCenter" will-change="transform" style={{transform:`translate3d(${mousePos.x*ContainerMovementScale}px,${mousePos.y*ContainerMovementScale}px,0px) `}}>
                 <div className="intro" will-change="transform">
                     <p style={{transform:`translate3d(${mousePos.x*titleMovementScale}px,${mousePos.y*titleMovementScale}px,0px)`}}>
                         260days of Memories
@@ -19,7 +19,7 @@ export default function CenterPictureContainer(props){
                     <p id="latlng"></p>
                 </div>
                 <div className="Memories Siberia">
-                        <img src={Siberia} width={337} height={450} value="Moscow,Russia N55.77&E37.65"></img>
+                        <a href="https://www.instagram.com/p/BWpVPtFHAVNBSSTZKqyrZLjy77HJ5DZ06fc3200/" target="_blank"><img src={Siberia} width={337} height={450} value="Moscow,Russia N55.77&E37.65"></img></a>
                         <div className="bios SiberiaBios" style={{transform:`translate3d(${mousePos.x * biosMovementScale}px,${mousePos.y * biosMovementScale}px,0)`}}>
                             <p><span>N55.77 E37.65</span></p>
                             <p>Moscow, Russia 2017/07/20</p>
@@ -27,14 +27,14 @@ export default function CenterPictureContainer(props){
                         </div>
                 </div>
                 <div className="Memories Jodhpur">
-                        <img src={Udaipur} width={400} height={400} value="Jodhpur,India N26.27&E72.96"></img>
+                        <a href="https://www.instagram.com/p/BsqOlE4g9a9oJ-i4YKRGoXb17KE678mQe0VhoA0/" target="_blank"><img src={Udaipur} width={400} height={400} value="Jodhpur,India N26.27&E72.96"></img></a>
                         <div className="bios JodhpurBio" style={{transform:`translate3d(${mousePos.x * biosMovementScale}px,${mousePos.y * biosMovementScale}px,0)`}}>
                             <p><span>N26.27 E72.96</span></p>
                             <p>Jodhpur, India 2019/01/16</p>
                         </div>
                 </div>
                 <div className="Memories Irkutsk">
-                        <img src={Irkutsk} width={400} height={400} value="Irkutsk,Russia N26.27&E72.96"></img>
+                        <a href="https://www.instagram.com/p/BWhaFcmn2WpDAjbC6amg3hNhWahOvYCzxiJ6Jk0/" target="_blank"><img src={Irkutsk} width={400} height={400} value="Irkutsk,Russia N26.27&E72.96"></img></a>
                         <div className="bios IrkutskBio" style={{transform:`translate3d(${mousePos.x * biosMovementScale}px,${mousePos.y * biosMovementScale}px,0)`}}>
                             <p><span>N51.78 E103.45</span></p>
                             <p>Irkutsk, Russia 2017/07/16</p>

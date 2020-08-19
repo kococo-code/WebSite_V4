@@ -1,5 +1,11 @@
 import { useRef, useEffect, useCallback } from 'react';
 
+/*
+    Observe is element visible Observer 
+    => https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API
+    But under ie 11 is not Support, So Not Used
+*/
+
 const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0,threshold = 0.01) => {
   const dom = useRef();
 

@@ -8,7 +8,7 @@ export default function LeftPictureContainer(props){
     return(
         <section id="PictureLeft" will-change="transform" style={{transform:`translate3d(${mousePos.x*ContainerMovementScale}px,${mousePos.y*ContainerMovementScale}px,0px)`}}>
             <div className="Memories Himalaya">
-                <img src={Himalaya} width={400} height={400} value="AnnaPruna,Nepal N28.35&E83.48"></img>
+                <a href="https://www.instagram.com/p/BtBCT6fg2We0nw34meCGANM7hIgxvVSYvPw2300/" target="_blank"><img src={Himalaya} width={400} height={400} value="AnnaPruna,Nepal N28.35&E83.48"></img></a>
                 <div className="bios HimalayaBios" style={{transform:`translate3d(${mousePos.x * biosMovementScale}px,${mousePos.y * biosMovementScale}px,0)`}}>
                     <p><span>N28.35 E83.48</span></p>
                     <p>AnnaPruna,Nepal 2019/01/19</p>
@@ -16,7 +16,7 @@ export default function LeftPictureContainer(props){
                 </div>
             </div>
             <div className="Memories Uyuni">
-                <img src={Uyuni} width={400} height={400} value="Uyuni,Bolivia S20.69&W67.20"></img>
+                <a href="https://www.instagram.com/p/B7PG54FA_lSG2aOop7aOl4cy8T_afEOh18rpvs0/" target="_blank"><img src={Uyuni} width={400} height={400} value="Uyuni,Bolivia S20.69&W67.20"></img></a>
                 <div className="bios UyuniBios" style={{transform:`translate3d(${mousePos.x * biosMovementScale}px,${mousePos.y * biosMovementScale}px,0)`}}>
                     <p><span>S20.69 W67.20</span></p>
                     <p>Uyuni Salt Flat,Bolivia 2020/01/13</p>

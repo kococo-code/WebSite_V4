@@ -1,10 +1,6 @@
 import React, { useEffect , useState } from 'react';
-import flightMapImage from '../../assets/image/flight_map.jpg';
-import DashBoardImage from '../../assets/image/dashboard.jpg';
 import circle from '../../assets/image/circle1.png';
-import CustomButton from '../util/CustomButton';
 function Project(){
-
     return(
         <section id="ProjectArchive">
             <section id="ProjectStartWording">

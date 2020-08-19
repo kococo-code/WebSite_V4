@@ -5,6 +5,7 @@ import Project from './Project/project';
 import Welcome from './Welcome';
 import TravelArchive from './travelarchive/travelArchive';
 export default function Main(){
+ 
     return(
             <div>
                 <Topbar></Topbar>

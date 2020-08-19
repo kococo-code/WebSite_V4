@@ -4,13 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.6.5",
     "exif-js": "^2.3.0",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -42,6 +44,19 @@
     "start": "export MODE=development && webpack-dev-server",
     "start_windows": "set MODE=development && webpack-dev-server",
     "develop_serving": "node server/app.js",
-    "deploy" : "aws s3 rm s3://94rising-front && aws s3 sync ./build s3://94rising-front"
+    "deploy": "aws s3 rm s3://94rising-front && aws s3 sync ./build s3://94rising-front"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      ">0.2%",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

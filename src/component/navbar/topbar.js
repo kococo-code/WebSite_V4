@@ -3,24 +3,27 @@ import underline from '../../assets/image/underline2.png';
 
 export default function Topbar(){
     const [brandName , setBrandName] = useState('Kococo');
-    const [pastHeight , setHeight] = useState(0);
     const [buttonDirection,setButtonDirection] = useState('down');
     function getHeight(){
+        
         const currentHeight = window.pageYOffset;
-        const element = document.getElementById('Topbar');
 
+        // On Display
         if(currentHeight < 400){
             const element = document.getElementById('Topbar');
             element.setAttribute('class','');
         }
+
+        // Chnage BUtton Direction
         else if(currentHeight === 0){
             // Scroll is Top , Change Button Direction
             const btnElement = document.getElementsByClassName('scrollbtn')[0];
             btnElement.setAttribute('class','scrollbtn');
         }
-
-        setHeight(currentHeight);
-
+        
+        // TopBar Brand Changer
+        brandChanger();
+        
     }
     
     function mousePoshandler(ev){
@@ -41,11 +44,9 @@ export default function Topbar(){
         if(buttonDirection=='down'){
             setButtonDirection('up');
             e.target.setAttribute('class','scrollbtn reverse');
-            //const projectElement = document.getElementById('ProjectArchive');
-            //const projectElementHeight = projectElement.getBoundingClientRect();
-            //console.log(projectElementHeight);
+            // Projects
             window.scrollTo({
-                top : 2700,
+                top : 2480,
                 behavior: 'auto'
             });
         }
@@ -60,21 +61,21 @@ export default function Topbar(){
         
     }
     function brandChanger(){
-        if(window.pageYOffset >= 2700){
+        if(window.pageYOffset > 2380){
             setBrandName('Project');
         }else{
             setBrandName('Kococo'); 
         }
     }
     useEffect(()=>{
-        brandChanger();
         window.addEventListener('mousemove',mousePoshandler)
         window.addEventListener('scroll',getHeight);
         return ()=>{
             window.removeEventListener('scroll',getHeight)
             window.removeEventListener('mousemove',mousePoshandler);
         };
-    },);
+    },[]);
+ 
    
     
 

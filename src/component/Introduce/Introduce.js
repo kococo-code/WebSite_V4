@@ -3,16 +3,10 @@ import Observe from '../util/DomObserve';
 import Face from '../../assets/image/face.png';
 import underlineLime from '../../assets/image/underline2.png';
 
+
 export default function Introduce(){
     const [scrollYoffset , setScrollYoffset] = useState(0);
     const [onBoard , setOnBoard] = useState(true);
-    const params ={
-        'AvrDelay' : 0, // Control FadeIn Delay
-        'ObserveThreshold' : .1, // Observer Callback Interaction Threshold
-        'AnimationDuration' : 1 // FadeIn Animation Duration 
-    }
-
-    // Will be Modify Animation     
   
     useEffect(()=>{
         const handleScroll = () =>{

@@ -1,10 +1,14 @@
+import 'core-js';
+import 'core-js/es/promise';
+import 'core-js/es/map';
+
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './css/style.js';
 
-import 'react-app-polyfill/ie9';
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable'; 
 
 ReactDOM.render(<App />,document.getElementById('root'));

@@ -100,17 +100,18 @@ module.exports = {
             },
             
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot|svg)$/,
                 use: [
                   {
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                       name: '[name].[ext]',
-                      outputPath: 'fonts/'
+                      fallback : 'file-loader',
+                      outputPath: 'static/fonts/'
                     }
                   }
                 ]
-            }
+            },              
         ]
     },
     

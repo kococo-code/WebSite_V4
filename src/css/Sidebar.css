@@ -5,11 +5,11 @@
     height : 100%;
     text-align: center;
     font-family : 'Roboto Mono',momospace;
-    font-weight : 200;
+    font-weight : 400;
     writing-mode: tb-rl;
     z-index: 80;
     font-size : 16px;
-    color : white;  
+    color : black;  
     transition : transform .4s;
 
 }
@@ -21,7 +21,7 @@
     margin-top : 20px;
     width : 27px;
     height : 27px;
-    fill : #fff;
+    fill : black;
     cursor : pointer;
     transition: all .4s;
 }
@@ -29,4 +29,14 @@
 
     transform : translateY(-5px);
     fill : #3a5ce9;
+}
+@keyframes fadeRightIn{
+    from{
+        opacity: 0;
+        transform : translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform : translateX(0px);
+    }
 }

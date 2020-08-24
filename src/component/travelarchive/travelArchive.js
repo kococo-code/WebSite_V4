@@ -1,105 +1,71 @@
 import React , {useEffect,useState} from 'react';
-import RightPictureContainer from './PictureRight'
-import CenterPictureContainer from './PictureCenter';
-import LeftPictureContainer from './PictureLeft';
+import Arctic from '../../assets/image/Travel/Arctic1.jpg';
+import Atacama from '../../assets/image/Travel/atacama.jpg';
+import Himalaya from '../../assets/image/Travel/Himalaya.jpg';
+import Uyuni from '../../assets/image/Travel/Uyuni.jpg';
+import Irkutsk from '../../assets/image/Travel/Irkutsk.jpg';
 export default function TravelArchive(){
-    const [mousePos,setMousePos] = useState({x:0,y:0});
-    const [mouseDirection , setMouseDirection] = useState({x:0,y:0});
-    const [pastPos , setPastPos] = useState({x:0,y:0});
-
-    const params = {
-        'X_MoveMentTick' : 15,
-        'Y_MoveMentTick' :  10,
-        'gradientDivideScale' : 15,
-        'titleMovementScale' : .05,
-        'biosMovementScale' : .1,
-        'randomCodeIntervalIterateTime' : 15,
-        'hasVisible' : false,
-        'isWindows' : false,
-        'minimumThreshold' : 1100
-    }
-    const central = {
-        'y' :window.innerHeight /2,
-        'x' : window.innerWidth /2
-    }
-
-    function handleMousePosition(e){
-        if(window.pageYOffset < 2400 && params.isWindows === false){
-            const x_gradient = (central.x - e.clientX)/params.gradientDivideScale;
-            const y_gradient = (central.y - e.clientY)/params.gradientDivideScale;
-            const x_Movement = (pastPos.x + x_gradient)*params.X_MoveMentTick;
-            const y_Movement = (pastPos.y + y_gradient)*params.Y_MoveMentTick;
-            setPastPos({x:x_Movement,y:y_Movement});
-            setMousePos({x:x_Movement,y:y_Movement});     
-        }
-    }
-
-    const isWindow = () =>{
-        const userAgent = window.navigator.userAgent;
-        const target = 'Trident';
-        if(userAgent.slice(37,44) === target){
-            params.isWindows = true
-            document.getElementById('Archive').style.transform = 'scale(0.8)';
-        }
-       
+    const [pastOffset , setPastOffset] = useState(0);
+    const nameArray = ["Svalbard","Atacama"]
+    const handleScroll = ()=>{
+        setPastOffset(window.pageYOffset);
     }
     useEffect(()=>{
-        // Travel Archive Mouse Transform was Not good performance 
-        // So I was Block Mouse behavior on handleMousePosition => parms.isWindows
-        isWindow();
-
-        window.addEventListener('mousemove',handleMousePosition);
         window.addEventListener('scroll',handleScroll);
         return ()=>{
-            window.removeEventListener('mousemove',handleMousePosition);
             window.removeEventListener('scroll',handleScroll);
         }
-    },[])
-
-    function handleScroll(){ };
-    function imgOnClick(e){
-        // Image OnClick Function
-        // randomCode is Make randomCode before render latlng , locationInformation
-
-        const target = e.target.getAttribute('value');
-        const charSet = '1234567890!@#$%^&*()QWERTYUIOPQASDFGHJKLZXCVBNM가나다라마바사아자차카타파하아야어요오요우유으이';
-        const randomNum = (modIndex) => Math.ceil((Math.random() * 1000)) % (modIndex-1);
-        const randomCodeGenerator = (codeLength) => {
-            let result = '';
-            for(let i =0 ; i< codeLength ; i++){
-                result += charSet[randomNum(charSet.length)];
+    })
+    const fadeFunction  = () =>{
+        // forEach Not Avaiable In IE
+        const elements = document.getElementsByClassName("Citys")[0].querySelectorAll('li');
+            for(let i=0; i<elements.length ; i++){
+                elements[i].setAttribute('class','fadeOut');
             }
-            return result;
-        }
-        let i= 0;        
-        if(target!=null){
-            const location = target.split(' ')[0];
-            const latlng = target.split(' ')[1].split('&');
-            const locationElement = document.getElementById('Location');
-            const latlngElement = document.getElementById('latlng');
-            let randomCodeInterval = setInterval(()=>{
-                locationElement.textContent = (randomCodeGenerator(i+2));
-                latlngElement.textContent = randomCodeGenerator(i+2);
-                i++;
-                if(i===params.randomCodeIntervalIterateTime){
-                    locationElement.textContent = location;
-                    latlngElement.textContent = latlng[0] + ' ' + latlng[1]; 
-                  
-                    clearInterval(randomCodeInterval);
-                }
-            },90)
-        }
+        let timer = () => setTimeout(()=>{     
+            const elements = document.getElementsByClassName("Citys")[0].querySelectorAll('li');
+            for(let i=0; i<elements.length ; i++){
+                elements[i].textContent = nameArray[1];
+            }
+            for(let i=0; i<elements.length ; i++){
+                elements[i].setAttribute('class','fadeIn');
+            }
+        },800);  
+        timer();
+        clearTimeout(timer);
     }
 
     return (
-        
-        <section id="TravelArchive" onClick={imgOnClick}>
-            <div id="Archive">
-                <LeftPictureContainer mousePos={mousePos} ContainerMovementScale={1} biosMovementScale={params.biosMovementScale}></LeftPictureContainer>
-                <RightPictureContainer mousePos={mousePos} ContainerMovementScale={1.2} biosMovementScale={params.biosMovementScale}></RightPictureContainer>
-                <CenterPictureContainer mousePos={mousePos} ContainerMovementScale={1.21} biosMovementScale={params.biosMovementScale} titleMovementScale={params.titleMovementScale}></CenterPictureContainer>
-            </div>
-
+        <section id="TravelArchive">
+            <section className="TravelHeader">
+                <p>World Travel !</p>
+                <p>33 Countries, 260 days</p>
+            </section>
+           <div className="PhotoWrapper Bolivia" >
+                <div className="PhotoDate">2020/01/10, Uyuni Bolivia</div>
+                <img src={Uyuni} width= {500} height ={500}></img>
+                <h1>Be Advanture</h1> 
+           </div>
+           <div className="PhotoWrapper Arctic">
+                <div className="PhotoDate">2017/08/01, Svalbard Norway</div>
+                <img src={Arctic} width= {500} height ={500}></img>
+                <h1>Svalbard Is.</h1> 
+           </div>
+           <div className="PhotoWrapper Nepal">
+                <div className="PhotoDate">2019/01/21, Chommrong Nepal</div>
+                <img src={Himalaya} width= {500} height ={500}></img>
+                <h1>AnnaPruna</h1> 
+           </div>
+           <div className="PhotoWrapper Atacama">
+                <div className="PhotoDate">2020/01/14, San pedro de Atacama, Chile</div>
+                <img src={Atacama} width= {500} height ={500}></img>
+                <h1 className="textAtacama">Atacama</h1>
+           </div>
+           <div className="PhotoWrapper Irkutsk">
+                <div className="PhotoDate">2017/07/14, Irkutsk, Russia</div>
+                <img src={Irkutsk} width= {500} height ={500}></img>
+                <h1>Irkutsk, Russia</h1>
+           </div>
         </section>
 
 

@@ -1,33 +1,35 @@
 #Topbar{
     position : fixed;
     top : 0px;
-    left : 0px;
-    width : 100%;
+    left : 5%;
+    width : 90%;
     height : 80px;
     z-index: 80;
-    background-color: black;
+    font-family : 'Archivo Black' , sans-serif;
+    font-size : 16px;
+    background-color: #eee;
+    color :black;
+    border-bottom : 2px solid #485969;
     transition : all ease .5s;
+
 }
-#Topbar .underline{
-    position : absolute;
-    top : 50px;
-    left : 0px;
-    width : 120px;
-    height : 20px;
-}
+
 .topbar_brand{
     position : absolute;
+    top : 20px;
     left : 45%;
-    line-height : 80px;
-    color : white;
     font-family : 'Inter' , sans-serif;
     font-size : 30px;
     font-style : italic;
     cursor: pointer;
     transition: all .4s;
+    color : #eee;
+    line-height: 10px;
+    text-shadow : -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
 .topbar_brand:hover{
-    transform : scale(1.2);
+    transform : translateY(20px);
 }
 .nav-link{
     display : none;
@@ -38,7 +40,7 @@
 .nav-link a{
     text-decoration: none;
     font-size : 16px;
-    color : white;
+    color : #485969;
     line-height: 80px;
     margin : 10px;
     font-family : "Inter",sans-serif;
@@ -51,12 +53,22 @@
     position : absolute;
     top : 25px;
     right : 5%;
-    fill : white;
+    fill : #485969;
     transform : rotate(-90deg);
     transition: transform .4s;
     cursor: pointer;
 }
-
+#Topbar .location{
+    position: absolute;
+    top : 26px;
+    left : 0px;
+    font-family : 'open sans' ,sans-serif;
+    font-weight : 400;
+    font-style : italic;
+    text-align: left;
+    line-height: 8px;
+    color : #485969;
+}
 
 #Topbar svg:hover{
     transform : rotate(-90deg) scale(1.2);
@@ -86,5 +98,15 @@
     }
     to{
         transform : translateY(10px) rotate(90deg) scale(1.2);
+    }
+}
+@keyframes fadeIn{
+    from{
+        transform : translateY(-80px);
+        opacity: 0;
+    }
+    to{
+        transform : translateY(0px);
+        opacity: 1;
     }
 }

@@ -1,229 +1,102 @@
 #TravelArchive{
     position : absolute;
-    top : 1024px;
+    top : 1200px;
     left : 0px;
     width: 100%;
-    height : 150%;
-    color : white;
-    overflow: hidden;
+    height : 2700px;
     opacity : 1;
-}
-#Archive{
-    position: absolute;
-    top : 0px;
-    left : 0px;
-    width : 100%;
-    height : 100%;
-}
-#TravelArchive.visible{
-    opacity : 1;
-    transition: opacity .5s;
-}
-#PictureExplorer{
-    position : absolute;
-    top : 0px;
-    left : 0px;
-    width : 100%;
-    height : 100%;
     overflow: hidden;
-
 }
-
-#PictureLeft{
+#TravelArchive section{
     position : absolute;
-    top : -500px;
-    left : -490px;
-    width : 1000px;
-    height : 150%;
-    background-color: black;
-}
-#PictureCenter{
-    position : absolute;
-    top : -500px;
-    left : 500px;
-    width : 1200px;
-    height : 150%;
-    background-color: black;
-    transform-style : preserve-3d;
-    perspective: 900px;
-
-}
-#PictureRight{
-    position : absolute;
-    top : -500px;
-    left : 1700px;
-    width : 2000px;
-    height : 150%;
-    background-color: black;
-    z-index: 1;
-
-}
-
-
-#PictureCenter .intro{
-    position : absolute;
-    top : 750px;
-    width : 100%;
-    opacity: 1;
-    z-index: 4;
-    font-family : 'Roboto' , sans-serif;
-    font-weight : 800;
-    font-size: 48px;
-    color : #f5f5f7;
-    font-style : italic;
-}
-
-#PictureCenter .Circle{
-    position : absolute;
-    top : 0px;
-    width : 120px;
-    height : 600px;
-    transform : translate3d(-60px,-230px,0px)rotate(-90deg);
-}
-#PictureCenter .Circle:hover{
-    transform : translate3d(-60px,-230px,0px) scale(1) rotate(-90deg);
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    #PictureCenter .Circle{
-        display :none;
-    }
-    #PictureCenter .Circle:hover{
-        display :none;
-    }
-   
-}
-    
-
-#PictureCenter #latlng{
-    line-height : 10px;
-}
-#TravelArchive .fadeIn{
-    animation : fadeIn .5s forwards;
-}
-
-/*
-Picture Common
-*/
-#TravelArchive span{
-    font-size : 15px;
-}
-#TravelArchive .Memories{
+    top: 50px;
     width : 600px;
-    height : 500px;
-    opacity : 1;
-
+    height : 200px;
+    font-family : 'Inter', sans-serif;
+    font-style : italic;
+    color: #cbff0f;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; 
 }
 
-#TravelArchive .bios{
-    padding : 5px;
-    text-align: left;
-    font-family : 'Roboto Mono' , monospace;
-    font-size : 18px;
-    font-weight : 300;
-    color : #f5f5f7;
-    background: rgba(0,0,0,.5);
+@media screen and (max-width : 1440px){
+    #TravelArchive section{
+        right : 7%;
+        width : 400px;
+        height : 300px;
+        font-size : 48px;
+
+    }
 }
-#TravelArchive img{
-    cursor: pointer;
-    transition : transform .4s;
-}
-#TravelArchive img:hover{
-    transform : scale(1.2);
+@media screen and (min-width : 1441px){
+    #TravelArchive section{
+        right  : 10%;
+        width : 800px;
+        height : 300px;
+        font-size : 60px;
+
+    }
 }
 
-
-/*
-Picture Location
-*/
-
-/* Right Side */
-#PictureRight .arctic{
+#TravelArchive .PhotoWrapper .PhotoDate{
+    text-align : left;
+    width : 100%;
+    color : black;
+    font-family: 'Open sans',sans-serif;
+    font-style : italic;
+    font-weight : 500;
+    font-size : 20px;
+}
+#TravelArchive .PhotoWrapper{
+    position : absolute; 
+    width : 500px;
+    height : 600px;
+    background : #eee;
+}
+#TravelArchive .PhotoWrapper img{
     position : absolute;
-    top : 500px;
-    left : 100px;
-}
-#PictureRight .arcticBios{
-    position : absolute;
-    top : 280px;
-    left : 50px;
-}
-#PictureRight .HuachaChina{
-    position : absolute;
-    top : 1000px;
-    left : -200px;
-}
-#PictureRight .HuachaChinaBio{
-    position : absolute;
-    top : 300px;
-    left : 200px;
-}
-#PictureRight .Atacama{
-    position : absolute;
-    top: 1300px;
-    left : 400px;
-}
-#PictureRight .AtacamaBio{
-    position : absolute;
-    top: 400px;
-    left : 200px;
-}
-/* Center Side*/
-#PictureCenter .Siberia{
-    position : absolute;
-    top : 1100px;
-    left : -100px;
-}
-#PictureCenter .SiberiaBios{
-    position : absolute;
-    top : 400px;
-    left : 100px;
-}
-#PictureCenter .Jodhpur{
-    position : absolute;    
-    top : 300px;
-    left : 400px;
-}
-#PictureCenter .JodhpurBio{
-    position : absolute;    
-    top : 250px;
-    left : 300px;
-}
-
-#PictureCenter .Irkutsk{
-    position : absolute;
-    top : 1150px;
-    left : 500px;
-}
-#PictureCenter .IrkutskBio{
-    position : absolute;
-    top : 400px;
-    left : 250px;
-}
-/* Left Side*/
-#PictureLeft .Himalaya{
-    position: absolute;
-    top : 500px;
-    left : 300px;
-    z-index: 30;
-}
-#PictureLeft .HimalayaBios{
-    position: absolute;
-    top : 300px;
+    top : 26px;
     left : 0px;
 }
-#PictureLeft .Uyuni{
+#TravelArchive .PhotoWrapper h1{
+    position : absolute;
+    top : 100px;
+    left : -80px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;    
+    font-size : 120px;
+    font-style : italic;
+    white-space : pre;
+    z-index: 1;
+}
+#TravelArchive .PhotoWrapper.Bolivia{
+    position : absolute;
+    top : 100px;
+    left : 10%;
+}
+#TravelArchive .PhotoWrapper.Arctic{
+    position : absolute;
+    top : 500px;
+    right : 10%;
+}
+#TravelArchive .PhotoWrapper.Nepal{
     position : absolute;
     top : 1000px;
-    left : 100px;
+    left : 7%;
 }
-
-@keyframes fadeIn{
-    from{
-        transition : translateY(-30px);
-        opacity : 0;
-    }
-    to{
-        transition : translateY(0px);
-        opacity : 1;
-    }
+#TravelArchive .PhotoWrapper.Atacama{
+    position : absolute;
+    top : 1300px;
+    right : 7%;
+}
+#TravelArchive .PhotoWrapper.Irkutsk{
+    position : absolute;
+    top : 1700px;
+    left : 7%;
+}
+#TravelArchive .PhotoWrapper .textAtacama{
+    position: absolute;
+    top : 100px;
+    left : 0px;
 }

@@ -1,5 +1,4 @@
 import React , {useEffect,useState} from 'react';
-import underline from '../../assets/image/underline2.png';
 
 export default function Topbar(){
     const [brandName , setBrandName] = useState('Kococo');
@@ -46,7 +45,7 @@ export default function Topbar(){
             e.target.setAttribute('class','scrollbtn reverse');
             // Projects
             window.scrollTo({
-                top : 2480,
+                top : 3400,
                 behavior: 'auto'
             });
         }
@@ -61,10 +60,12 @@ export default function Topbar(){
         
     }
     function brandChanger(){
-        if(window.pageYOffset > 2380){
+        if(window.pageYOffset > 3300){
             setBrandName('Project');
+        }else if(window.pageYOffset < 3300 && window.pageYOffset > 1000){
+            setBrandName('Travel'); 
         }else{
-            setBrandName('Kococo'); 
+            setBrandName('Kococo');
         }
     }
     useEffect(()=>{
@@ -83,8 +84,10 @@ export default function Topbar(){
     return(
         <nav id="Topbar">
             <section className="topbar_brand">
-                {brandName}
-                <img className="underline" src={underline} />
+                <div>{brandName}</div>
+                <div style={{color : '#DFFF00'}}>{brandName}</div>
+                <div>{brandName}</div>
+
             </section>
             <svg className="scrollbtn" width="30" height="30" xmlns="http://www.w3.org/2000/svg" onClick={handleOnClick}>
                 <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z"/>
@@ -93,7 +96,10 @@ export default function Topbar(){
                 <a className="nav-element" href="/">Home</a>
                 <a className="nav-element" href="#Project">Project</a>
             </section>
-
+            <div className="location">
+                <p>서울특별시 영등포구</p>
+                <p>37.50,126.91 2020/08/21 modified</p>
+            </div>
         </nav>
     )
 }

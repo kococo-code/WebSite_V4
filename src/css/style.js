@@ -7,7 +7,6 @@ import './welcome.css';
 import './Sidebar.css';
 import './topbar.css';
 
-import './navbar.css';
 
 // Start Page
 import './intro.css';

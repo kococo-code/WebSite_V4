@@ -1,50 +1,3 @@
-#Topbar{
-    position : fixed;
-    top : 0px;
-    left : 5%;
-    width : 90%;
-    height : 80px;
-    z-index: 80;
-    font-family : 'Archivo Black' , sans-serif;
-    font-size : 16px;
-    background-color: #eee;
-    color :black;
-    border-bottom : 2px solid #485969;
-    transition : all ease .5s;
-
-}
-
-.topbar_brand{
-    position : absolute;
-    top : 20px;
-    left : 45%;
-    font-family : 'Inter' , sans-serif;
-    font-size : 30px;
-    font-style : italic;
-    cursor: pointer;
-    transition: all .4s;
-    color : #eee;
-    line-height: 10px;
-    text-shadow : -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.topbar_brand:hover{
-    transform : translateY(20px);
-}
-.nav-link{
-    display : none;
-    position : absolute;
-    top: 0px;
-    right : 10%;
-}
-.nav-link a{
-    text-decoration: none;
-    font-size : 16px;
-    color : #485969;
-    line-height: 80px;
-    margin : 10px;
-    font-family : "Inter",sans-serif;
-}
 .topbar_hidden{
     transform : translateY(-80px);
 }
@@ -74,7 +27,6 @@
     transform : rotate(-90deg) scale(1.2);
     animation: btnAnimate 1s ease infinite alternate ;
     animation-delay: .4s;
-
 }
 #Topbar .reverse{
     transform: rotate(90deg);

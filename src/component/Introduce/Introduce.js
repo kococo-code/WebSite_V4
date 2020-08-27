@@ -3,11 +3,18 @@ import Face from '../../assets/image/face3.jpg';
 
 
 export default function Introduce(){
-    const [scrollYoffset , setScrollYoffset] = useState(0);
-    const [onBoard , setOnBoard] = useState(true);
-    const [lastOffset , setlastOff] = useState(0);
-  
-    
+    const [pastYScroll , setPastYScroll] = useState(0);    
+    function skipPage(){
+        
+      
+    }
+
+    useEffect(()=>{
+        window.addEventListener('scroll',skipPage);
+        return ()=>{
+            window.removeEventListener('scroll',skipPage);
+        }
+    },[])
 
     return(
         <section id="Introduce">

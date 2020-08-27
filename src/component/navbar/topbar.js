@@ -1,18 +1,18 @@
 import React , {useEffect,useState} from 'react';
-
-export default function Topbar(){
+import {Topbar,TopbarBrand, LoactionInfo} from './styled';
+export default function TopbarComponent(){
     const [brandName , setBrandName] = useState('Kococo');
     const [buttonDirection,setButtonDirection] = useState('down');
+    const [visiblity , setVisibility] = useState(true);
     function getHeight(){
-        
         const currentHeight = window.pageYOffset;
-
         // On Display
         if(currentHeight < 400){
-            const element = document.getElementById('Topbar');
-            element.setAttribute('class','');
+            setVisibility(true);
         }
-
+        else if(currentHeight >= 400){
+            setVisibility(false);
+        }
         // Chnage BUtton Direction
         else if(currentHeight === 0){
             // Scroll is Top , Change Button Direction
@@ -29,12 +29,10 @@ export default function Topbar(){
         const currentHeight = window.pageYOffset;
         if(currentHeight > 400){
             if(ev.screenY < 150){
-                const element = document.getElementById('Topbar');
-                element.setAttribute('class','');
+               // setVisibility(true);
             }
             else{
-                const element = document.getElementById('Topbar');
-                element.setAttribute('class','topbar_hidden');
+              //  setVisibility(false);
             }
         }
         
@@ -82,24 +80,21 @@ export default function Topbar(){
 
 
     return(
-        <nav id="Topbar">
-            <section className="topbar_brand">
+        <Topbar id="Topbar" visiblity={visiblity}>
+            <TopbarBrand>
                 <div>{brandName}</div>
                 <div style={{color : '#DFFF00'}}>{brandName}</div>
                 <div>{brandName}</div>
-
-            </section>
-            <svg className="scrollbtn" width="30" height="30" xmlns="http://www.w3.org/2000/svg" onClick={handleOnClick}>
+            </TopbarBrand>
+            
+            <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" onClick={handleOnClick}>
                 <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z"/>
             </svg>
-            <section className="nav-link">
-                <a className="nav-element" href="/">Home</a>
-                <a className="nav-element" href="#Project">Project</a>
-            </section>
-            <div className="location">
+            <LoactionInfo>
                 <p>서울특별시 영등포구</p>
                 <p>37.50,126.91 2020/08/21 modified</p>
-            </div>
-        </nav>
+            </LoactionInfo>
+                
+        </Topbar>
     )
 }

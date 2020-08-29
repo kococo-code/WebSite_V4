@@ -26,10 +26,10 @@ function App(){
     else{
       return(  
         /// DeskTop
-        <div>
+        <React.Fragment>
           <Main></Main>
           <SideBar></SideBar>
-        </div>
+        </React.Fragment>
       )}
 };
 

@@ -8,7 +8,8 @@ const ProjectComponent = styled.section`
     width : 100%;
     font-family : 'Roboto' , sans-serif;
     font-size : 16px;
-    
+    transition : transform 1.8s ease;
+    transform : translateY(${props=> props.translateY}px);
 `  
 
 const ProjectSection = styled.section`
@@ -19,8 +20,7 @@ const ProjectSection = styled.section`
     width : 100%;
     background : ${props => props.background};
     color : ${props => props.fontColor};
-    cursor : pointer;
-    overflow-x : scroll;
+    border-bottom : 1px solid white;
 `
 const ProjectName = styled.h1`
     position : absolute;
@@ -32,18 +32,27 @@ const ProjectName = styled.h1`
     font-size : ${props => props.fontSize}rem;
     font-style : italic;
     text-align : right;
-    line-height : 16px;
+    line-height : 1rem;
+    span{
+        box-shadow : inset 0px -20px #3a5ce9;
+        transition : all .4s;
+    }
+    & span:hover{
+        box-shadow : inset 0px -50px #555555;
+
+    }
 `
 const ProjectContents = styled.article`
     position : absolute;
-    top : 350px;
+    top : 400px;
     left : 100px;
     width : 80%;
     height : 500px;
     text-align : left;
-    line-height : 1em;
+    line-height : 1.5rem;
     p{
-        font-family : 'Roboto Mono' , monospace;
+        font-family : 'Roboto' ,"Noto Sans KR","Noto Sans TC" , sans-serif;
+        font-style : italic;
         font-size : 1.2em;
     }
     a{
@@ -52,7 +61,13 @@ const ProjectContents = styled.article`
         padding : 2px 5px 2px 5px;
         color : black;
         background : white; 
+        transition : all .4s;
     }
+    a:hover{
+        background : #3a5ce9;
+        color : white;
+    }
+   
 `
 const Stacklists = styled.ul`
     position : absolute;
@@ -66,14 +81,27 @@ const Stacklists = styled.ul`
         border-radius : 50px;
         padding : 10px;
         margin : 10px;
+        transition : all .4s;
     }   
+    li:hover{
+        background : #3a5ce9;
+        color : white;
+        border : 1px solid transparent;
+    }
 `
 const MorePages = styled.article`
     width : 100%;
     height : ${WindowHeight}px;
     transform : translateX(${props=>(props.PagesNum*window.outerWidth)}px)
 `
-
+const ProjectImage = styled.article`
+    position : absolute;
+    top : 500px;
+    right : 400px;
+    width : ${props=>props.width}px;
+    height : ${props=>props.height}px;
+    border-radius : 5px;
+`
 
 export {
     ProjectComponent,
@@ -81,5 +109,5 @@ export {
     ProjectName,
     ProjectContents,
     Stacklists,
-    MorePages
+    ProjectImage
 }

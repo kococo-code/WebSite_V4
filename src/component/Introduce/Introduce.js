@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Face from '../../assets/image/face3.jpg';
-
-
 export default function Introduce(){
-    const [pastYScroll , setPastYScroll] = useState(0);    
-    function skipPage(){
-        
-      
-    }
-
-    useEffect(()=>{
-        window.addEventListener('scroll',skipPage);
-        return ()=>{
-            window.removeEventListener('scroll',skipPage);
-        }
-    },[])
-
     return(
         <section id="Introduce">
             <header>
@@ -28,7 +13,6 @@ export default function Introduce(){
             <div>
                 <img id="face" src={Face} />
             </div>            
-            <h1 className="Name">Jintaek Lim</h1>
         </section>
     )
 }

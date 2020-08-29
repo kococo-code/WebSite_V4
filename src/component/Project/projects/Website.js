@@ -1,6 +1,5 @@
 import React from 'react';
 import {ProjectComponent ,ProjectSection,ProjectName,ProjectContents,Stacklists} from '../styled';
-import Button from '../../util/CustomButton';
 
 export default function WebSite(){
     return (
@@ -31,7 +30,6 @@ export default function WebSite(){
             <li>AWS EC2</li>
             <li>AWS Route 53</li>
         </Stacklists>
-        <Button top={800} left={100} href={"https://github.com/kococo-code/WebSite_V4"} target="" text="Github Codes"/>
         </ProjectSection>
             
     )

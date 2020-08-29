@@ -1,7 +1,6 @@
 import React from 'react';
-import {ProjectSection,ProjectName,ProjectContents,Stacklists,MorePages} from '../styled';
-import Button from '../../util/CustomButton';
-
+import {ProjectSection,ProjectName,ProjectContents,Stacklists,ProjectImage} from '../styled';
+import flight_map from '../../../assets/image/flight_map.jpg';
 export default function FlightFinder(){
     return(
         <ProjectSection background="#000" fontColor="#eee">
@@ -24,10 +23,7 @@ export default function FlightFinder(){
                 <li>AWS EC2</li>
                 <li>AWS RDS</li>
             </Stacklists>
-            <Button top={800} left={100} href={"https://github.com/kococo-code/React-leaflet-deckgl"} target="_blank" text="Github"></Button>
-            <Button top={800} left={220} href={"https://github.com/kococo-code/FlightDataServer"} target="_blank" text="Server Code"></Button>
-            <Button top={800} left={400} href={"https://94rising.xyz/flights"} target="" text="Demo"></Button>
-            <MorePages PagesNum={1}></MorePages>
+            
         </ProjectSection>
     )
 }

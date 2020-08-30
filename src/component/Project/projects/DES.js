@@ -6,10 +6,10 @@ export default function DES(){
         <ProjectSection background="#000" fontColor="#eee">
             <ProjectName fontSize={2.5}>
                 <p>
-                    Data Encryption Standard
+                    <span>Data Encryption Standard</span>
                 </p>
                 <p>
-                    암호화 알고리즘(DES)
+                    <span>암호화 알고리즘(DES)</span>
                 </p>
                
             </ProjectName>
